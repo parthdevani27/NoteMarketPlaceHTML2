@@ -1,0 +1,328 @@
+@media (min-width: 768px){
+	
+	.mobile-menu {
+		display: none;
+	}
+
+	.mobile-menu-btn {
+		display: none;
+	}
+}
+@media (min-width: 1200px) and (max-width: 1299px) {
+	.site-header .header-wrapper .logo-wrapper {
+		width: 10px;
+	}
+
+	.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li {
+		margin: 0 10px;
+	}
+
+	.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li a {
+		font-size: 16px;
+		font-weight: 300;
+	}
+
+	.btn-logout {
+		font-size: 16px;
+	}
+
+
+
+
+
+
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.site-header .header-wrapper .logo-wrapper {
+		width: 7px;
+	}
+
+	.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li {
+		margin: 0 5px;
+	}
+
+	.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li a {
+		font-size: 16px;
+		font-weight: 300;
+	}
+
+	.btn-logout {
+		font-size: 16px;
+	}
+
+	.twitter {
+		margin-left: 0px;
+	}
+
+	.linkedin {
+		margin-left: 0px;
+	}
+
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	.custom-select {
+		width: 130px;
+	}
+
+	.book-img img {
+		width: 320px;
+		height: 253px;
+	}
+
+	.book-details {
+		width: 320px;
+		height: 330px;
+	}
+
+	.book-heading-1 {
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.site-header .header-wrapper .logo-wrapper {
+		display: none;
+	}
+
+	.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li {
+		margin: 0 7px;
+	}
+
+	.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li a {
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	.btn-logout {
+		font-size: 18px;
+
+	}
+
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	.custom-select {
+		width: 90px;
+	}
+
+	.book-heading-1 {
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+
+}
+
+
+@media (max-width: 767px) {
+	.site-header {
+		display: none;
+	}
+
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	footer p {
+
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 16px;
+
+	}
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+	#filter-srarch-bar{
+		height: 230px;
+		
+	}
+	.custom-select {
+		width: 140px;
+	}
+	
+
+	
+
+	
+
+	.book-heading-1 {
+		font-size: 16px;
+		font-weight: 300;
+	}
+	.book-img img {
+		width: 300px;
+		height: 253px;
+		margin-left: 20px;
+	}
+
+	.book-details {
+		width: 300px;
+		height: 330px;
+		margin-left: 20px;
+	}
+	.book-details p{
+		font-size: 14px;
+		width: 300;
+	}
+
+}
+
+
+
+
+
+@media (max-width: 540px){
+		#filter-srarch-bar{
+		height: 290px;
+		
+	}
+	.custom-select {
+		width: 170px;
+	}
+
+}
+@media (max-width: 480px) {
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	footer p {
+
+		font-size: 11px;
+		font-weight: 300;
+		line-height: 16px;
+
+	}
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+		#filter-srarch-bar{
+		height:auto;
+		
+	}
+	.custom-select {
+		width: 100px;
+	}
+	
+
+	
+
+	
+
+	.book-heading-1 {
+		font-size: 16px;
+		font-weight: 300;
+	}
+	.book-img img {
+		width: 280px;
+		height: 253px;
+		margin-left: 20px;
+	}
+
+	.book-details {
+		width: 280px;
+		height: 330px;
+		margin-left: 20px;
+	}
+	.book-details p{
+		font-size: 14px;
+		width: 300;
+	}
+
+
+
+
+
+
+
+}
+
+
+
+
+@media (max-width: 320px) {}

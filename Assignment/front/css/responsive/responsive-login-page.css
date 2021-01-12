@@ -1,0 +1,117 @@
+@media (min-width: 768px){
+	
+	.mobile-menu {
+		display: none;
+	}
+
+	.mobile-menu-btn {
+		display: none;
+	}
+}
+@media (min-width: 1200px) and (max-width: 1299px) {
+
+
+
+
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+#forgot-pwd-top-logo{
+	margin-left: 0px;
+	margin-top: 10px;
+}
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+	#white-box{
+		margin-left: 0;
+	}
+	
+}
+
+
+@media (max-width: 767px) {
+	
+#white-box{
+		margin-left: 0;
+	width: 460px;
+	}
+	.btn-general{
+			width: inherit;
+	}
+	#incorrect-pwd{
+		font-size: 12px;
+	}
+	input[type="password"],
+	input[type="text"],
+	 input[type="email"]{
+		font-size: 14px;
+	}
+	#white-box p{
+		font-size: 30px;
+	}
+	#white-box .bottom-text p{
+		font-size: 14px;
+	}
+	#white-box p span{
+		font-size: 14px;
+	}
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+#white-box{
+		margin-left: 0;
+	width: 300px;
+	}
+	.btn-general{
+			width: inherit;
+	}
+	#incorrect-pwd{
+		font-size: 12px;
+	}
+	input[type="password"],
+	input[type="text"],
+	 input[type="email"]{
+		font-size: 12px;
+	}
+	#white-box p{
+		font-size: 28px;
+	}
+	#white-box .bottom-text p{
+		font-size: 12px;
+	}
+	#white-box p span{
+		font-size: 12px;
+	}
+	#forgot-pwd label{
+		font-size: 14px;
+	}
+	#forget{
+		font-size: 12px;
+	}
+ 
+}
+	
+	
+
+
+
+
+
+}
+
+
+
+
+@media (max-width: 320px) {}

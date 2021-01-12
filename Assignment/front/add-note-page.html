@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<link href=" https://fonts.googleapis.com/css2?family=Open+Sans
+:wght@300;400;600;700& display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,
+maximum-scale=1.0 ,user-scalable=no">
+	<title>Add Notes</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!--link bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+	<!-- link css -->
+	<link rel="stylesheet" href="css/add-note-page.css">
+	<!-- link responsive -->
+	<link rel="stylesheet" href="css/responsive/responsive-add-notes.css">
+</head>
+
+<body>
+<nav class="mobile-menu">
+<label for="show-menu" class="show-menu"><span>	<img src="images/pre-login/logo.png" alt="img" class="img-responsive"></span><div id="mobile-menu-btn">&#9776;</div></label>
+
+	<input type="checkbox" id="show-menu">
+		<ul id="menu">
+		<li><a href="#">Dashboard</a></li>
+		<li>			<a href="#">Notes</a>		</li>
+		<li>			<a href="#">Members</a>		</li>
+		<li><a href="#">Reports</a></li>
+		<li><a href="#">Settings</a></li>
+		<li><a href="#"><img src="images/User-Profile/reviewer-1.png" alt="img" class="img-responsive"></a></li>
+		<li><a href="#"><a href="#"><button type="submit" class="btn btn-block  btn-mobile-logout">Logout</button></a></a></li>
+	</ul>
+	<div class="mobile-menu-close-btn"></div>
+</nav>
+<div class="wrapper">
+        <header class="site-header">
+          <div class="header-wrapper">
+            <div class="logo-wrapper">
+              <a href="#" title="Site Logo">
+                <img src="images/pre-login/logo.png" alt="top-logo" class="img-responsive">
+              </a>
+            </div>
+            <div class="navigation-wrapper">
+              <nav class="main-nav">  
+                 <ul class="menu-navigation">
+                    <li>
+                      <a href="#">search notes</a>
+                    </li>
+                    <li>
+                      <a href="#">sell your notes</a>
+                    </li>
+                    <li>
+                      <a href="#">buyer request</a>
+                    </li>
+                    <li>
+                      <a href="#">FAQ</a>
+                    </li>
+                    
+                    <li>
+                      <a href="#">Contact us</a>
+                    </li>
+                    <li>
+                      <a href="#"> <img src="images/User-Profile/reviewer-1.png" alt="img" class="img-responsive"></a>
+                    </li>
+                     <li>
+                      <a href="#">	<button type="submit" class="btn btn-block btn-header">logout</button></a>
+                    </li>
+                  </ul>     
+              </nav>
+            </div>
+          </div>
+        </header> 
+        <main>
+           
+        </main>
+    </div>
+	
+	
+	<div class="background-img">
+		<img src="images/Search/banner-with-overlay.jpg" alt="img" class="img-responsive">
+		<p class="text-center">Add Notes</p>
+	</div>
+	<section id="add-notes-page">
+		<div class="content-box-md">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<div class="add-notes-details">
+							<h4 class="add-notes-heading">Basic Note Details</h4>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<label for="validationDefault01" id="title">Title*</label>
+						<input type="text" class="form-control" id="validationDefault01" placeholder="Enter Your Notes Title" required>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<label for="inlineFormCustomSelectPref1" id="category">Category*</label>
+						<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref1" placeholder="select your category">
+							<option value="1">select your category</option>
+							<option value="2"></option>
+							<option value="3"></option>
+						</select>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<label>Display Picture</label>
+							</div>
+							<div class="col-md-12 col-sm-12">
+								<div class="add-border text-center">
+									<label for="upload">
+										<img src="images/User-Profile/upload.png">
+										<p style="color: lightgray;">Upload a Picture</p>
+										<input type="file" class="upload" style="display:none;">
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<label>Upload Notes*</label>
+							</div>
+							<div class="col-md-12 col-sm-12">
+								<div class="add-border text-center">
+									<label for="upload">
+										<img src="images/Add-notes/upload-note.png">
+										<p style="color: lightgray;">Upload your notes</p>
+										<input type="file" class="upload" style="display:none;" required>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<label for="inlineFormCustomSelectPref2" id="type">Category*</label>
+						<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref2" placeholder="select your note type">
+							<option value="1">Select your note type</option>
+							<option value="2"></option>
+							<option value="3"></option>
+						</select>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<label for="validationDefault03" id="title">Number of pages</label>
+						<input type="number" class="form-control" id="validationDefault03" placeholder="Enter number of notes pages">
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<label for="validationDefault04" id="description">Description*</label>
+						<input type="text" class="form-control" id="validationDefault04" placeholder="Enter your description " required>
+					</div>
+				</div>
+				<div id="institution-info">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<h4 class="add-notes-heading">Institution Information</h4>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<label for="inlineFormCustomSelectPref3" id="type">Country</label>
+							<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref3" placeholder="select your note type">
+								<option value="1">Select your Country</option>
+								<option value="2"></option>
+								<option value="3"></option>
+							</select>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<label for="validationDefault04" id="institution">Institution</label>
+							<input type="text" class="form-control" id="validationDefault04" placeholder="Enter Your institution name">
+						</div>
+
+					</div>
+				</div>
+				<div id="cource-details">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<h4 class="add-notes-heading">Course Details</h4>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<label for="validationDefault05" id="cource">Cource Name</label>
+							<input type="text" class="form-control" id="validationDefault05" placeholder="Enter Your cource name">
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<label for="validationDefault06" id="cource-code">Cource Code</label>
+							<input type="number" class="form-control" id="validationDefault06" placeholder="Enter Your cource code">
+						</div>
+
+						<div class="col-md-6 col-sm-6">
+
+							<label for="validationDefault07" id="professor">Professor/Lecturer</label>
+							<input type="text" class="form-control" id="validationDefault07" placeholder="Enter Your professor name">
+
+						</div>
+					</div>
+				</div>
+				<div id="selling-info">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<h4 class="add-notes-heading">Selling Information</h4>
+						</div>
+
+						<div class="col-md-6 col-sm-6">
+							<div class="row">
+								<div class="col-md-12 col-sm-12">
+									<label>Sell For*</label><br>
+									<div class="radio-btn">
+										<div class="form-check-inline">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+												<label class="form-check-label" for="inlineRadio1">Free</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+												<label class="form-check-label" for="inlineRadio2">Paid</label>
+											</div>
+										</div>
+									</div>
+								</div>
+									<div class="col-md-12 col-sm-12">
+									<div class="sell-price-remove-margin">
+										<label for="validationDefault08" id="professor">Sell Price*</label>
+										<input type="number" class="form-control" id="validationDefault08" placeholder="Enter your price" required>
+										</div>
+									</div>
+								
+							</div>
+						</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="row">
+									<div class="col-md-12 col-sm-12">
+										<label>Note Preview</label>
+									</div>
+									<div class="col-md-12 col-sm-12">
+										<div class="note-preview text-center">
+											<label for="upload">
+												<img src="images/User-Profile/upload.png">
+												<p style="color: lightgray;">Upload a file</p>
+												<input type="file" class="upload" style="display:none;">
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div id="add-notes-btn">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-4">
+								<button type="button" class="btn btn-block btn-general">SAVE</button>
+							</div>
+							<div class="col-md-1 col-sm-1 col-3">
+							</div>
+							<div class="col-md-4 col-sm-4 col-4">
+								<button type="button" class="btn btn-block btn-general btn-publish">PUBLISH</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+	</section>
+			<footer>
+
+			<div class="horizontal-rule">
+								
+			</div>
+			<div class="row">
+					<div class="col-md-6 col-sm-6 col-6">
+				<div class="footer-text text-left">
+					<p>
+						Copyright &copy; Tatvasoft All right reserved.
+					</p>
+				</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-6">
+				
+				<div class="row">
+					<div class="col-md-9 col-sm-6 col-3"></div>
+				<div class="col-md-1 col-sm-1 col-1">
+					<div class="facebook text-center">
+						<img src="images/home/home/facebook.png" alt="picture"   >
+					</div>
+					</div>
+					<div class="col-md-1 col-sm-1 col-1">
+					<div class="twitter text-center">
+						<img src="images/home/home/twitter.png" alt="picture"   >
+					</div>
+					</div>
+					<div class="col-md-1 col-sm-1 col-1">
+					<div class="linkedin text-center">
+						<img src="images/home/home/linkedin.png" alt="picture"   >
+					</div>
+					</div>
+				</div>
+				
+				
+				</div>
+		</div>
+		
+	</footer>
+	
+	
+	
+	
+	
+
+	<!-- link jquery file-->
+	<script src="js/jquery.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<!-- link js file-->
+	<script src="js/script2.js"></script>
+</body>
+
+</html>
