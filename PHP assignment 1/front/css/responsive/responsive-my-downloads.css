@@ -1,0 +1,354 @@
+@media (min-width: 768px){
+	
+	.mobile-menu {
+		display: none;
+	}
+
+	.mobile-menu-btn {
+		display: none;
+	}
+}
+@media (min-width: 1200px) and (max-width: 1299px) {
+	.site-header .header-wrapper .logo-wrapper {
+		width: 10px;
+	}
+
+	.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li {
+		margin: 0 10px;
+	}
+
+	.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li a {
+		font-size: 16px;
+		font-weight: 300;
+	}
+
+	.btn-logout {
+		font-size: 16px;
+	}
+
+
+
+
+
+
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.site-header .header-wrapper .logo-wrapper {
+		width: 7px;
+	}
+
+	.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li {
+		margin: 0 5px;
+	}
+
+	.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li a {
+		font-size: 16px;
+		font-weight: 300;
+	}
+
+	.btn-logout {
+		font-size: 16px;
+	}
+
+	.twitter {
+		margin-left: 0px;
+	}
+
+	.linkedin {
+		margin-left: 0px;
+	}
+
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	#my-download-notes input[type="text"] {
+		width: 250px;
+	}
+
+
+
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.site-header .header-wrapper .logo-wrapper {
+		display: none;
+	}
+
+	.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li {
+		margin: 0 7px;
+	}
+
+	.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation > li a {
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	.btn-logout {
+		font-size: 18px;
+
+	}
+
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	#my-download-notes input[type="text"] {
+		width: 150px;
+	}
+
+	.table th,
+	.table td {
+		font-size: 14px;
+	}
+
+	.modal-body h5 {
+		font-size: 22px;
+	}
+
+	.modal-content {
+		margin-top: 50px;
+
+		padding: 20px 30px;
+		width: 500px;
+		height: 426px;
+
+	}
+
+	.close-btn {
+		display: inline-block;
+		position: absolute;
+		margin-top: -10px;
+		margin-left: 5px;
+
+	}
+}
+
+
+@media (max-width: 767px) {
+	.site-header {
+		display: none;
+	}
+
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	footer p {
+
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 16px;
+
+	}
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	#my-download-notes input[type="text"] {
+		width: 150px;
+	}
+
+	.table th,
+	.table td {
+		font-size: 14px;
+	}
+	.modal-body h5 {
+		font-size: 22px;
+	}
+
+	.modal-content {
+		margin-top: 50px;
+	margin-left: 50px;
+		padding: 10px 20px;
+		width: 350px;
+		height: 426px;
+
+	}
+
+	.close-btn {
+		display: inline-block;
+		position: absolute;
+		margin-top: 0px;
+		margin-left: -5px;
+
+	}
+	#Review-pop-up input[type="text"]{
+		height: 100px;
+	}
+	#Review-pop-up .comment label{
+		font-size: 14px;
+	}
+	.submit-btn button{
+		width:117px;
+	height: 40px;
+		margin-top: 20px;
+	}
+	.rate:not(:checked) > label
+	{
+		font-size: 30px;
+	}
+
+
+
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	footer p {
+
+		font-size: 11px;
+		font-weight: 300;
+		line-height: 16px;
+
+	}
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	#my-download-notes input[type="text"] {
+		width: 150px;
+	}
+
+	.table th,
+	.table td {
+		font-size: 14px;
+	}
+
+	.progress-heading p {
+		font-size: 20px;
+	}
+		.modal-body h5 {
+		font-size: 22px;
+	}
+
+	.modal-content {
+		margin-top: 50px;
+	margin-left: 20px;
+		padding: 5px 5px;
+		width: 280px;
+		height: 350px;
+
+	}
+
+	.close-btn {
+		display: inline-block;
+		position: absolute;
+		margin-top: 5px;
+		margin-left: -20px;
+
+	}
+	#Review-pop-up input[type="text"]{
+		height: 100px;
+	}
+	#Review-pop-up .comment label{
+		font-size: 12px;
+	}
+	.submit-btn button{
+		width:100px;
+	height: 35px;
+		margin-top: 20px;
+	}
+	.rate:not(:checked) > label
+	{
+		font-size: 25px;
+	}
+
+
+
+
+
+
+
+}
+
+
+
+
+@media (max-width: 320px) {}

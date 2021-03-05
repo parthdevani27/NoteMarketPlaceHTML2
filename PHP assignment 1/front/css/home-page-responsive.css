@@ -1,0 +1,29 @@
+@media (min-width: 1401) and (max-width: 1600) {
+	#home-heading h3 {}
+}
+
+@media (min-width: 1300) and (max-width: 1400) {
+
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+		#home-heading {
+		margin-left: 170px;
+	}
+	#home-about h3{
+		margin-left: 100px;
+	}
+	#home-about p{
+		margin-left: 200px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (max-width: 767px) {}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 320px) {}
