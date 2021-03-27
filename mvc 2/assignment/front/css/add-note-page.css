@@ -1,0 +1,168 @@
+.content-box-lg {
+    padding: 0px 0;
+}
+
+.content-box-md {
+    padding: 0px 0;
+	
+}
+
+.content-box-sm {
+    padding: 0px 0;
+}
+
+html,
+body {
+    height: 100%;
+	
+}
+
+section {
+    background: #fff;
+    overflow: hidden;
+}
+.background-img {
+	margin-top: 80px;
+}
+.background-img img{
+	position: absolute;
+	height: 250px;
+	
+}
+.background-img p{
+	font-family: "open Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 54px;
+    color: #fff;
+	position: relative;
+	padding-top: 100px;
+	margin-bottom: 160px;
+}
+.add-notes-heading{
+		font-family: "open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+}
+.add-border{
+	border: 1px solid #d1d1d1;
+	
+	height: 110px;
+	display: inline-block;
+	width: inherit;
+}
+#add-notes-page label{
+	margin-bottom: 10px;
+	margin-top: 30px;
+	font-family: "open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+	display: inline-block;
+	overflow: hidden;
+}
+input[type="text"],
+input[type="number"]
+{
+	overflow: hidden;
+	height: 50px;
+	
+}
+.uploadfilepic{
+	
+}
+input[type="file"]{
+
+
+	
+}
+.custom-select{
+	height: 50px;
+	overflow: hidden;
+	 background-image: url("../images/Add-notes/arrow-down.png");
+	background-size: auto;
+}
+#institution-info{
+	margin:60px 0 40px 0;
+	
+}
+#cource-details{
+	margin-bottom: 40px;
+}
+#selling-info{
+	margin-bottom: 40px;
+}
+
+
+.fix-height{
+	height: 540px;
+}
+.btn-general{
+		background-color: #6255a5;
+	width: 150px;
+	height: 40px;
+	border-radius: 3px;
+	color: #fff;
+	font-family: "open Sans", sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	display: inline-block;
+	
+}
+.btn-modal{
+		background-color: #6255a5;
+	width: 100px;
+	height: 40px;
+	border-radius: 3px;
+	color: #fff;
+	font-family: "open Sans", sans-serif;
+	
+	display: inline-block;
+}
+#add-notes-btn{
+	margin-top: -20px;
+	margin-bottom: 60px;
+}
+.btn-publish{
+	margin-left: -100px;
+}
+.radio-btn{
+	padding: 0;
+	display: inline-block;
+}
+#add-notes-page #selling-info .radio-btn label{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#add-notes-page #selling-info .sell-price-remove-margin label{
+	margin-top: 7px;
+	margin-bottom: 10px;
+
+	
+}
+.forpaidviewthis{
+	display: none;
+	
+}
+#add-notes-page #selling-info .radio-btn input{
+		width: 26px;
+	height: 26px;
+	display: inline-block;
+	border: 1px solid #6255a5;
+	margin: -5px 10px 0 0;
+}
+.note-preview{
+	border: 1px solid #d1d1d1;
+	
+	height: 120px;
+	display: inline-block;
+	width:inherit;
+}
+.form-check-input:disabled ~ .form-check-label{
+	color: #6255a5;
+}
+
