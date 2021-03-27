@@ -106,6 +106,27 @@ function showFileName( event ) {
 }
 
 });
+
+$("#notepreview2").on("click",function(){
+	
+var input = document.getElementById( 'notepreview2' );
+var infoArea = document.getElementById( 'previewtext' );
+
+input.addEventListener( 'change', showFileName );
+
+function showFileName( event ) {
+  
+  
+  var input = event.srcElement;
+
+  var fileName = input.files[0].name;
+  
+ 
+  infoArea.textContent = 'File name: ' + fileName;
+	$("#previewtext").css('color','#333333');
+}
+
+});
 //for notes preview
 $("#upload").on("click",function(){
 	
@@ -128,6 +149,27 @@ function showFileName( event ) {
 
 });
 
+
+$("#upnotes1").on("click",function(){
+	
+var input = document.getElementById( 'upnotes1' );
+var infoArea = document.getElementById( 'uppictext' );
+
+input.addEventListener( 'change', showFileName );
+
+function showFileName( event ) {
+  
+  
+  var input = event.srcElement;
+
+  var fileName = input.files[0].name;
+  
+ 
+  infoArea.textContent = 'File name: ' + fileName;
+	$("#uppictext").css('color','#333333');
+}
+
+});
 
 
 //for paid notes

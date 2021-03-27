@@ -131,6 +131,7 @@ $noteid = $_GET['noteid'];
 	$img 			= $row['DisplayPicture'];
 	$pubdate 		= $row['PublishedDate'];
 	$title 			= $row['Title'];
+	$sellerid	 	= $row['SellerID'];
 	$description 	= $row['Description'];
 	$uni 			= $row['UniversityName'];
 	$country 		= $row['Country'];
@@ -145,19 +146,15 @@ $noteid = $_GET['noteid'];
 	$catid 			= $row['Category'];
 	$cat			= tabledata('notecategories','Name',"ID",$catid);
 
+	$img_path ="images/Search/1.jpg";
 	if(!empty($img)){
-	$query = "SELECT `FilePath` FROM `sellernotesattachements` WHERE `FileName`='$img' ";
-	$get_table_data_by_id_query = mysqli_query($connection,$query);
-	$row = mysqli_fetch_assoc($get_table_data_by_id_query);
-	if(!empty($row)){
-	$img_path = $row["FilePath"];
-	} else {
-	$img_path ="images/Search/1.jpg";
+		if(file_exists("member/$sellerid/$noteid/$img")){
+	$img_path = "member/$sellerid/$noteid/$img";
+		} 
 	}
-	} else {
-	$img_path ="images/Search/1.jpg";
-
-	}
+		
+	
+							
 
 	
 	
@@ -373,17 +370,23 @@ $rate = ceil($rate);
 					<div class="col-md-5 col-sm-12 col-12">
 						<div id="notes-pdf">
 							<p>Notes Preview</p>
-							
-							<div id="Iframe-Cicis-Menu-To-Go" class="set-margin-cicis-menu-to-go set-padding-cicis-menu-to-go set-border-cicis-menu-to-go set-box-shadow-cicis-menu-to-go center-block-horiz">
+								<div id="Iframe-Cicis-Menu-To-Go" class="set-margin-cicis-menu-to-go set-padding-cicis-menu-to-go set-border-cicis-menu-to-go set-box-shadow-cicis-menu-to-go center-block-horiz">
+							<?php 
+if(!empty($preview)){
+if(file_exists("member/$sellerid/$noteid/$preview")){
+$preview_path = "member/$sellerid/$noteid/$preview";
+?>		
+
+						
   <div class="responsive-wrapper responsive-wrapper-padding-bottom-90pct"
      style="-webkit-overflow-scrolling: touch; overflow: auto;">
-     <iframe src="images/sample.pdf">
+     <iframe src="<?php echo $preview_path; ?>">
       <p style="font-size: 110%;"><em><strong>ERROR: </strong>  
 An &#105;frame should be displayed here but your browser version does not support &#105;frames.</em> Please update your browser to its most recent version and try again, or access the file <a href="http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf">with this link.</a></p>
     </iframe>
   </div>
+<?php } }  ?>
 </div>
-
 						</div>
 					</div>
 					<div class="col-md-7 col-sm-12 col-12">

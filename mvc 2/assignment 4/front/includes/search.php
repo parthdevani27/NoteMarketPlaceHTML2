@@ -19,7 +19,7 @@ if(isset($_POST['pageno'])){
 				$pageno_1 = ($pageno-1)*9;
 
 
-				$query = "SELECT sellernotes.ID AS ID,sellernotes.Status,sellernotes.Title,sellernotes.Category,sellernotes.NoteType,sellernotes.UniversityName,sellernotes.Course,sellernotes.Country,sellernotes.ID,sellernotes.NumberofPages,sellernotes.DisplayPicture,sellernotes.PublishedDate
+				$query = "SELECT sellernotes.ID AS ID,sellernotes.Status,sellernotes.Title,sellernotes.Category,sellernotes.NoteType,sellernotes.UniversityName,sellernotes.Course,sellernotes.Country,sellernotes.ID,sellernotes.NumberofPages,sellernotes.DisplayPicture,sellernotes.PublishedDate,sellernotes.SellerID
 				FROM sellernotes LEFT JOIN sellernotesreviews ON  sellernotes.ID=sellernotesreviews.NoteID GROUP BY ID ";
 
 				$query .= "HAVING sellernotes.Status=11 ";
@@ -86,6 +86,7 @@ if(isset($_POST['pageno'])){
 						while($row = mysqli_fetch_assoc($view_notes_search_page)){
 							$title 		 = $row['Title'];
 							$id 		 = $row['ID'];
+							$sellerid	 = $row['SellerID'];
 							$pages 	 	 = $row['NumberofPages'];
 							$university  = $row['UniversityName'];
 							$noteimage 	 = $row['DisplayPicture'];
@@ -96,20 +97,15 @@ if(isset($_POST['pageno'])){
 						
 						
 					
-				
-						if(!empty($noteimage)){
-							$query = "SELECT `FilePath` FROM `sellernotesattachements` WHERE `FileName`='$noteimage' ";
-						$get_table_data_by_id_query = mysqli_query($connection,$query);
-						$row = mysqli_fetch_assoc($get_table_data_by_id_query);
-							if(!empty($row)){
-						$img_path = $row["FilePath"];
-							} else {
-								$img_path ="images/Search/1.jpg";
-							}
-						} else {
 						$img_path ="images/Search/1.jpg";
-						
+						if(!empty($noteimage)){
+							if(file_exists("../member/$sellerid/$id/$noteimage")){
+						$img_path = "member/$sellerid/$id/$noteimage";
+							}
 						}
+							
+					
+						
 						
 						
 						?>

@@ -3,7 +3,19 @@
 <?php  include "includes/functions.php"; ?>
 <?php session_start(); ?>
 <?php 
-//$actionby=$_SESSION['ID'];
+
+
+
+
+
+
+
+
+
+
+
+
+
 if(isset($_SESSION['ID'])){
 	$sellerid=$_SESSION['ID'];
 
@@ -14,98 +26,91 @@ if(isset($_POST['save'])){
 	$query = "SELECT max(ID) AS ID FROM sellernotes";
 	$last_note_id_query = mysqli_query($connection,$query);
 	confirmq($last_note_id_query);
+	
 	 $row = mysqli_fetch_assoc($last_note_id_query);
-	 echo $lastnoteid = $row['ID']+1;
+	 $lastnoteid = $row['ID']+1;
+	
 	if (!file_exists("member/$sellerid/$lastnoteid/attachment")) {
-    mkdir("member/$sellerid/$lastnoteid/attachment", 0777, true);
+    	mkdir("member/$sellerid/$lastnoteid/attachment", 0777, true);
 	}
 	
 	
-	$title=$_POST['title'];
-	$category=$_POST['category'];
-	$notetype=$_POST['notetype'];
-	$description=$_POST['description'];
-	$country=$_POST['country'];
-	$institution=$_POST['institution'];
-	$courcename=$_POST['courcename'];
-	$courcecode=$_POST['courcecode'];
-	$professor=$_POST['professor'];
-	$sellfor=$_POST['inlineRadioOptions'];
+	$title					= $_POST['title'];
+	$category				= $_POST['category'];
+	$notetype				= $_POST['notetype'];
+	$description   			= $_POST['description'];
+	$country				= $_POST['country'];
+	$institution			= $_POST['institution'];
+	$courcename				= $_POST['courcename'];
+	$courcecode				= $_POST['courcecode'];
+	$professor				= $_POST['professor'];
+	$sellfor				= $_POST['inlineRadioOptions'];
+	$sellprice				= $_POST['booksellprice'];
+	$numofpage				= $_POST['numofpage'];
+	$sellprice				= $_POST['booksellprice'];
+	$numofpage				= $_POST['numofpage'];
+ 	$displaypicture 		= $_FILES['displaypicture']['name'];
+    $displaypicture_temp   	= $_FILES['displaypicture']['tmp_name'];
 	
-	$sellprice=$_POST['booksellprice'];
-		if(!empty($sellprice)){
-		$sellprice=$_POST['booksellprice'];
-	} else {
-		$sellprice=0;
-	}
-	$numofpage=$_POST['numofpage'];
-	if(!empty($numofpage)){
-		$numofpage=$_POST['numofpage'];
-	} else {
-		$numofpage=0;
-	}
+	$preview_cv 			= $_FILES['noteprevie']['name'];
+    $preview_cv_tmp 		= $_FILES['noteprevie']['tmp_name'];
+
+	if($sellfor == 0){$sellprice = 0;}
+	if(empty($numofpage)){$numofpage = 0;}
 	
+//displaypicture	
+if(!empty($_FILES['displaypicture']['name'])){
+   $profile_picture_ext = strtolower(pathinfo( $_FILES['displaypicture']['name'], PATHINFO_EXTENSION ));     $profile_picture = "DP_". date("dmYhis") . "." . $profile_picture_ext;
+} else{
+   $profile_picture = "";
+   $profile_picture_ext = "jpg";
+}
+	move_uploaded_file($displaypicture_temp, "member/$sellerid/$lastnoteid/$profile_picture");
 	
-	
-	$displaypicture        = $_FILES['displaypicture']['name'];
-    $displaypicture_temp   = $_FILES['displaypicture']['tmp_name'];
-	move_uploaded_file($displaypicture_temp, "member/$sellerid/$lastnoteid/$displaypicture" );
-	
-	
-	
-		$total = count($_FILES['upload']['name']);
-		for( $i=0 ; $i < $total ; $i++ ) {
-		  $tmpFilePath = $_FILES['upload']['tmp_name'][$i];
-		  if ($tmpFilePath != ""){
-			$newFilePath =$_FILES['upload']['name'][$i];
-if(move_uploaded_file($tmpFilePath, 
-					  "member/$sellerid/$lastnoteid/attachment/$newFilePath")) {
-	
-		$filepath = "member/$sellerid/$lastnoteid/attachment/$newFilePath";
-		$query = "INSERT INTO `sellernotesattachements` (`NoteID`, `FileName`, `FilePath`, `CreatedDate`, `CreatedBy`, `ModifiedDate`, `ModifiedBy`, `IsActive`) VALUES ('$lastnoteid', '$newFilePath', '$filepath', NULL, NULL, NULL, NULL, b'1')";
-	$sellernotesattechment_query = mysqli_query($connection,$query);
-	confirmq($sellernotesattechment_query);
-			}
-		  }
-		}
-	
-	
-	$preview_cv = $_FILES['noteprevie']['name'];
-    $preview_cv_tmp = $_FILES['noteprevie']['tmp_name'];
+//notepreview	
+if(!empty($_FILES['noteprevie']['name'])){
+   $preview_cv_ext = strtolower(pathinfo( $_FILES['noteprevie']['name'], PATHINFO_EXTENSION )); 
+   $preview_cv = "Preview_". date("dmYhis") ."." . $preview_cv_ext;
+} else{
+   $preview_cv = "";
+   $preview_cv_ext = "jpg";
+}
+	move_uploaded_file($preview_cv_tmp, "member/$sellerid/$lastnoteid/$preview_cv");
+
 
 	
-	if(!empty($_FILES['noteprevie']['name'])){
-		$preview_cv_ext = strtolower(pathinfo( $_FILES['noteprevie']['name'], PATHINFO_EXTENSION )); 
-		$preview_cv = "Preview_". date("dmYhis") ."." . $preview_cv_ext;
-		$preview_path = "member/$sellerid/$lastnoteid/$preview_cv";
-	} else {
-		 
-                    $preview_cv = "";
-                    $preview_cv_ext = "jpg";
-                
-	}
-		 move_uploaded_file($preview_cv_tmp, "member/$sellerid/$lastnoteid/$preview_cv");
-		$query = "INSERT INTO `sellernotesattachements` (`NoteID`, `FileName`, `FilePath`, `CreatedDate`, `CreatedBy`, `ModifiedDate`, `ModifiedBy`, `IsActive`) VALUES ('$lastnoteid', '$preview_cv', '$preview_path', now())";
-	$sellernotesattechment_query = mysqli_query($connection,$query);
-	confirmq($sellernotesattechment_query);
+$query =	"INSERT INTO `sellernotes` ( `SellerID`, `Status`, `PublishedDate`, `Title`, `Category`, `DisplayPicture`, `NoteType`, `NumberofPages`, `Description`, `UniversityName`, `Country`, `Course`, `CourseCode`, `Professor`, `IsPaid`, `SellingPrice`, `NotesPreview`, `CreatedDate`, `CreatedBy`) VALUES
+($sellerid, 8, now(), '$title', $category, '$profile_picture', $notetype, {$numofpage}, '$description', '$institution',$country, '$courcename', '$courcecode', '$professor',$sellfor, $sellprice, '$preview_cv', now(), $sellerid)";
 	
 	
+	$insert_data_for_addbook_query = mysqli_query($connection,$query);
+	confirmq($insert_data_for_addbook_query);	
 	
-	
-	
-	
-	
-$query =	"INSERT INTO `sellernotes` ( `SellerID`, `Status`, `ActionedBy`, `AdminRemarks`, `PublishedDate`, `Title`, `Category`, `DisplayPicture`, `NoteType`, `NumberofPages`, `Description`, `UniversityName`, `Country`, `Course`, `CourseCode`, `Professor`, `IsPaid`, `SellingPrice`, `NotesPreview`, `CreatedDate`, `CreatedBy`, `ModifiedDate`, `ModifiedBy`, `IsActive`) VALUES
-($sellerid, 8, 1, 'ar', now(), '$title', $category, '$displaypicture', $notetype, $numofpage, '$description', '$institution',$country, '$courcename', '$courcecode', '$professor',$sellfor, $sellprice, '$preview_cv', now(), $sellerid, NULL, NULL, b'1')";
-		$insert_data_for_addbook_query = mysqli_query($connection,$query);
-		confirmq($insert_data_for_addbook_query);
 		
-		header("Location: edit-note-page.php?editnote=$lastnoteid");
-
+//notes
+$total = count($_FILES['upload']['name']);
+for( $i=0 ; $i < $total ; $i++ ) {
+		$query = "SELECT max(ID) AS ID FROM sellernotesattachements";
+		$select_notes_attachment = mysqli_query($connection,$query);
+		confirmq($select_notes_attachment);
+		$row = mysqli_fetch_assoc($select_notes_attachment);
+		$attachment_id 	= $row['ID'] + 1;
+		$notes		 	= $_FILES['upload']['name'][$i];
+	  	$notes_tmp 		= $_FILES['upload']['tmp_name'][$i];
+     	$notes_ext 		= pathinfo( $_FILES['upload']['name'][$i], PATHINFO_EXTENSION ); 
+		$notes_name 	= $attachment_id ."_". date("dmYhis") .$i. "." . $notes_ext;
+		$notes_path		= "member/$sellerid/$lastnoteid/attachment/$notes_name";
+	move_uploaded_file($notes_tmp,"member/$sellerid/$lastnoteid/attachment/$notes_name");
+	
+	$query  = "INSERT INTO `sellernotesattachements` ";
+	$query .= "(`ID`, `NoteID`, `FileName`, `FilePath`, `CreatedDate`, `CreatedBy`) ";
+	$query .= "VALUES ($attachment_id,$lastnoteid,'$notes_name','$notes_path',now(),$sellerid)";
+	$inset_attachment_query = mysqli_query($connection,$query);
+	confirmq($inset_attachment_query);
+}
 	
 
-
-
+		header("Location: edit-note-page.php?editnote=$lastnoteid");
 }
 } else {
 	redirect();
@@ -225,7 +230,7 @@ $query =	"INSERT INTO `sellernotes` ( `SellerID`, `Status`, `ActionedBy`, `Admin
 					</div>
 					<div class="col-md-6 col-sm-6">
 						<label for="validationDefault03" >Number of pages</label>
-						<input type="number" class="form-control" id="validationDefault03"  name="numofpage" placeholder="Enter number of notes pages">
+						<input type="number" class="form-control" value="" id="validationDefault03"  name="numofpage" placeholder="Enter number of notes pages">
 					</div>
 					<div class="col-md-12 col-sm-12">
 						<label for="validationDefault04" id="description">Description*</label>

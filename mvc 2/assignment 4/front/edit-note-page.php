@@ -12,7 +12,7 @@ if(isset($_GET['editnote'])){
 	
 	if(isset($_GET['publish'])){
 	
-	$query = "UPDATE `sellernotes` SET `Status` = 11 WHERE `ID` = $noteid ";
+	$query = "UPDATE `sellernotes` SET `Status` = 9 WHERE `ID` = $noteid ";
 	$publish_notes_query = mysqli_query($connection , $query);
 	confirmq($publish_notes_query);
 	
@@ -25,36 +25,38 @@ if(isset($_GET['editnote'])){
 	$query = "SELECT * FROM sellernotes WHERE ID=$noteid" ;
 	$edit_notes_query = mysqli_query($connection,$query);
 	confirmq($edit_notes_query);
+	
 	while($row = mysqli_fetch_assoc($edit_notes_query)){
 	
-	$e_title = $row['Title'];
+	$e_title 			= $row['Title'];
 			
-	$e_category = $row['Category'];
+	$e_category 		= $row['Category'];
 	
-	$e_displaypicture = $row['DisplayPicture'];
+	$e_displaypicture 	= $row['DisplayPicture'];
 	
-	$e_notetype = $row['NoteType'];
+	$e_notetype 		= $row['NoteType'];
 		
-	$e_noofpage = $row['NumberofPages'];
+	$e_noofpage 		= $row['NumberofPages'];
 	
-	$e_description = $row['Description'];
+	$e_description 		= $row['Description'];
 		
-	$e_country = $row['Country'];
+	$e_country 			= $row['Country'];
 		
-	$e_univercity = $row['UniversityName'];
+	$e_univercity 		= $row['UniversityName'];
 	
-	$e_cource = $row['Course'];
+	$e_cource 			= $row['Course'];
 	
-	$e_courcecode = $row['CourseCode'];
+	$e_courcecode 		= $row['CourseCode'];
 		
-	$e_professor = $row['Professor'];
+	$e_professor 		= $row['Professor'];
 		
-	$e_ispaid = $row['IsPaid'];
+	$e_ispaid 			= $row['IsPaid'];
+			
+	$e_sellprice 		= $row['SellingPrice'];
 		
-	$e_sellprice = $row['SellingPrice'];
+	$e_notepreview 		= $row['NotesPreview'];
 		
-	$e_notepreview = $row['NotesPreview'];
-		
+	$e_sellerid 		= $row['SellerID'];
 
 	
 	
@@ -79,97 +81,93 @@ if(isset($_POST['save'])){
 	
 	
 	
-	$title=$_POST['title'];
-	$category=$_POST['category'];
-	$notetype=$_POST['notetype'];
-	$description=$_POST['description'];
-	$country=$_POST['country'];
-	$institution=$_POST['institution'];
-	$courcename=$_POST['courcename'];
-	$courcecode=$_POST['courcecode'];
-	$professor=$_POST['professor'];
-	$sellfor=$_POST['inlineRadioOptions'];
+	$title			= $_POST['title'];
+	$category		= $_POST['category'];
+	$notetype		= $_POST['notetype'];
+	$description	= $_POST['description'];
+	$country		= $_POST['country'];
+	$institution	= $_POST['institution'];
+	$courcename		= $_POST['courcename'];
+	$courcecode		= $_POST['courcecode'];
+	$professor		= $_POST['professor'];
+	$sellfor		= $_POST['inlineRadioOptions'];
+	$sellprice		= $_POST['booksellprice'];
+	$numofpage		= $_POST['numofpage'];
 	
-	$sellprice=$_POST['booksellprice'];
-		if(!empty($sellprice)){
-		$sellprice=$_POST['booksellprice'];
-	} else {
-		$sellprice=0;
-	}
-	$numofpage=$_POST['numofpage'];
-	if(!empty($numofpage)){
-		$numofpage=$_POST['numofpage'];
-	} else {
-		$numofpage=0;
-	}
-	
-	
-//	
-//	$displaypicture        = $_FILES['displaypicture']['name'];
-//    $displaypicture_temp   = $_FILES['displaypicture']['tmp_name'];
-//	move_uploaded_file($displaypicture_temp, "upload/member/$sellerid/$lastnoteid/$displaypicture" );
-//	
-//	
-//	
-//		$total = count($_FILES['upload']['name']);
-//	if($total==0){
-//		
-//	} else {
-//		for( $i=0 ; $i < $total ; $i++ ) {
-//		  $tmpFilePath = $_FILES['upload']['tmp_name'][$i];
-//		  if ($tmpFilePath != ""){
-//			$newFilePath =$_FILES['upload']['name'][$i];
-//if(move_uploaded_file($tmpFilePath, 
-//					  "upload/member/$sellerid/$lastnoteid/attachment/$newFilePath")) {
-//	
-//		$filepath = "upload/member/$sellerid/$lastnoteid/attachment/$newFilePath";
-//		$query = "UPDATE `sellernotesattachements` SET(`NoteID`, `FileName`, `FilePath`, `CreatedDate`, `CreatedBy`, `ModifiedDate`, `ModifiedBy`, `IsActive`) VALUES ('$lastnoteid', '$newFilePath', '$filepath', NULL, NULL, NULL, NULL, b'1')";
-//	$query = "UPDATE `sellernotesattachements` SET 
-//	`FileName` = '$newFilePath', 
-//	`Status` = '8', 
-//	`Status` = '8', 
-//	`Status` = '8', 
-//	`Status` = '8', 
-//	`Status` = '8', 
-//	`Status` = '8', 
-//	`Status` = '8' 
-//	WHERE `sellernotes`.`ID` = 125";
-//	$sellernotesattechment_query = mysqli_query($connection,$query);
-//	confirmq($sellernotesattechment_query);
-//			}
-//		  }
-//		}
-//	}
-//	
-//	
-//	
-//	
-//	$noteprevie        = $_FILES['noteprevie']['name'];
-//    $noteprevie_temp   = $_FILES['noteprevie']['tmp_name'];
-//	move_uploaded_file($noteprevie_temp, "upload/member/$sellerid/$lastnoteid/$noteprevie" );
-//	
-//	
+	$query = "UPDATE `sellernotes` SET `Title` = '$title',`Category` = '$category',`NoteType` = '$notetype',`NumberofPages` = '$numofpage',`Description` = '$description',`UniversityName` = '$institution',`Country` = '$country',`Course` = '$courcename',`CourseCode` = '$courcecode',`Professor` = '$professor',`IsPaid` = '$sellfor',`SellingPrice` = '$sellprice' WHERE `ID` = $noteid";
 
-	$query = "UPDATE `sellernotes` SET 
-	`Title` = '$title',
-	`Category` = '$category',
-	`NoteType` = '$notetype',
-	`NumberofPages` = '$numofpage',
-	`Description` = '$description',
-	`UniversityName` = '$institution',
-	`Country` = '$country',
-	`Course` = '$courcename',
-	`CourseCode` = '$courcecode',
-	`Professor` = '$professor',
-	`IsPaid` = '$sellfor',
-	`SellingPrice` = '$sellprice'
-	WHERE `ID` = $noteid";
-		$insert_data_for_addbook_query = mysqli_query($connection,$query);
-		confirmq($insert_data_for_addbook_query);
-		
+	$update_data_for_addbook_query = mysqli_query($connection,$query);
+	confirmq($update_data_for_addbook_query);	
+	
+	
+//displaypicture	
+	if(!empty($_FILES['displaypicture']['name'])){
+	$displaypicture 		= $_FILES['displaypicture']['name'];
+    $displaypicture_temp   	= $_FILES['displaypicture']['tmp_name'];
+	$profile_picture_ext = strtolower(pathinfo( $_FILES['displaypicture']['name'], PATHINFO_EXTENSION )); $profile_picture = "DP_". date("dmYhis") . "." . $profile_picture_ext;
+	unlink("member/$e_sellerid/$noteid/$e_displaypicture");
+	move_uploaded_file($displaypicture_temp, "member/$e_sellerid/$noteid/$profile_picture");
+		$query = "UPDATE `sellernotes` SET DisplayPicture='$profile_picture'  WHERE `ID` = $noteid";
+		$update_dp_query = mysqli_query($connection,$query);
+		confirmq($update_dp_query);
+	} 
+	
+//notepreview	
+	if(!empty($_FILES['noteprevie']['name'])){
+	$preview_cv 			= $_FILES['noteprevie']['name'];
+    $preview_cv_tmp 		= $_FILES['noteprevie']['tmp_name'];
+	$preview_cv_ext = strtolower(pathinfo( $_FILES['noteprevie']['name'], PATHINFO_EXTENSION )); 
+	$preview_cv = "Preview_". date("dmYhis") ."." . $preview_cv_ext;
+	unlink("member/$e_sellerid/$noteid/$e_notepreview");
+	move_uploaded_file($preview_cv_tmp, "member/$e_sellerid/$noteid/$preview_cv");
+		$query = "UPDATE `sellernotes` SET NotesPreview='$preview_cv'  WHERE `ID` = $noteid";
+		$update_notepreview_query = mysqli_query($connection,$query);
+		confirmq($update_notepreview_query);
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+if(!empty($_FILES['upload']['name'])){	
+$total = count($_FILES['upload']['name']);
+if($total >= 1){
+for( $i=0 ; $i < $total ; $i++ ) {
+		$query = "SELECT max(ID) AS ID FROM sellernotesattachements";
+		$select_notes_attachment = mysqli_query($connection,$query);
+		confirmq($select_notes_attachment);
+		$row = mysqli_fetch_assoc($select_notes_attachment);
+		$attachment_id 	= $row['ID'] + 1;
+		$notes		 	= $_FILES['upload']['name'][$i];
+	  	$notes_tmp 		= $_FILES['upload']['tmp_name'][$i];
+     	$notes_ext 		= pathinfo( $_FILES['upload']['name'][$i], PATHINFO_EXTENSION ); 
+		$notes_name 	= $attachment_id ."_". date("dmYhis") .$i. "." . $notes_ext;
+		$notes_path		= "member/$e_sellerid/$noteid/attachment/$notes_name";
+	if($notes_ext != ''){
+	move_uploaded_file($notes_tmp,"member/$e_sellerid/$noteid/attachment/$notes_name");
+	
+	$query  = "INSERT INTO `sellernotesattachements` ";
+	$query .= "(`ID`, `NoteID`, `FileName`, `FilePath`, `CreatedDate`, `CreatedBy`) ";
+	$query .= "VALUES ($attachment_id,$noteid,'$notes_name','$notes_path',now(),$e_sellerid)";
+	$inset_attachment_query = mysqli_query($connection,$query);
+	confirmq($inset_attachment_query);
+	}
+		}	
+	}	
+}
+	
+	
+	
+
 }
 } else {
-	echo "<script>alert('login first')</script>";
+	redirect();
 }
 ?>
 	<title>Add Notes</title>
@@ -259,12 +257,12 @@ if(isset($_POST['save'])){
 							</div>
 							<div class="col-md-12 col-sm-12">
 								<div class="add-border text-center">
-									<label for="upnotes">
+									<label for="upnotes1">
 										<img src="images/Add-notes/upload-note.png">
 										<div id="file-upload-filename"></div>
 										<p id="remove-text" style="color: lightgray;">Upload your notes</p>
 									</label>
-										<input type="file" name="upload[]" id="upnotes"  class="upload" style="display:none;" multiple="multiple" />
+										<input type="file" name="upload[]" id="upnotes1"  class="upload" accept="application/pdf, application/vnd.ms-excel" style="display:none;" multiple="multiple"/>
 										 
 								</div>
 							</div>
@@ -419,10 +417,10 @@ if(isset($_POST['save'])){
 									</div>
 									<div class="col-md-12 col-sm-12">
 										<div class="note-preview text-center">
-											<label for="notepreview1">
+											<label for="notepreview2">
 												<img src="images/User-Profile/upload.png">
 												<p id="previewtext" ><?php echo $e_notepreview;?></p>
-												<input type="file" class="upload" name="noteprevie" id="notepreview1" style="display:none;" >
+												<input type="file" class="upload" name="noteprevie" id="notepreview2" style="display:none;" >
 											</label>
 										</div>
 									</div>
