@@ -1,0 +1,548 @@
+@media (min-width: 768px){
+	
+
+}
+@media (min-width: 1200px) and (max-width: 1299px) {
+
+
+
+
+
+
+
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+	.twitter {
+		margin-left: 0px;
+	}
+
+	.linkedin {
+		margin-left: 0px;
+	}
+
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	#note-detail-img h3 {
+		font-size: 26px;
+		margin-left: 10px;
+		width: 100%;
+	}
+
+	#notes-name h5 {
+		font-size: 16px;
+		margin-left: 10px;
+		width: 130%;
+	}
+
+	#notes-name {
+		margin-left: 30px;
+	}
+
+	.btn-download {
+		width: 180px;
+		height: 40px;
+		font-size: 16px;
+	}
+
+	#note-detail-part-2 p {
+		font-size: 14px;
+	}
+
+	.details-style {
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	#custmers-reviews {
+		width: 500px;
+		height: auto;
+		margin-left: 40px;
+		margin-top: 45px;
+
+	}
+
+	#notes-pdf embed {
+		width: 400px;
+
+	}
+
+	#custmers-reviews p {
+		font-size: 16px;
+	}
+
+	#custmers-reviews p span {
+		font-size: 14px;
+		font-weight: 300;
+	}
+
+	#custmers-reviews-1 {
+		padding: 15px 15px 0 15px;
+	}
+
+	#custmers-reviews-2 {
+		margin-top: -20px;
+		padding: 15px 15px 0 15px;
+	}
+
+	#custmers-reviews-3 {
+		margin-top: -20px;
+		padding: 15px 15px 0 15px;
+	}
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	#note-detail-img h3 {
+		font-size: 26px;
+
+		width: 100%;
+	}
+
+	#notes-name h5 {
+		font-size: 14px;
+
+		width: 130%;
+	}
+
+	#notes-name {}
+
+	.btn-download {
+		width: 180px;
+		height: 40px;
+		font-size: 16px;
+	}
+
+	#note-detail-part-2 p {
+		font-size: 12px;
+	}
+
+	.details-style {
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	#custmers-reviews {
+		width: 400px;
+		height: auto;
+		margin-left: 20px;
+		margin-top: 45px;
+
+	}
+
+	#notes-pdf embed {
+		width: 300px;
+
+	}
+
+	#custmers-reviews p {
+		font-size: 16px;
+	}
+
+	#custmers-reviews p span {
+		font-size: 14px;
+		font-weight: 300;
+	}
+
+	#custmers-reviews-1 {
+		padding: 15px 15px 0 15px;
+	}
+
+	#custmers-reviews-2 {
+		margin-top: -20px;
+		padding: 15px 15px 0 15px;
+	}
+
+	#custmers-reviews-3 {
+		margin-top: -20px;
+		padding: 15px 15px 0 15px;
+	}
+
+	#note-detail-img img {
+		height: 240px;
+		width: 160px;
+	}
+
+	#note-detail-part-2 h6 {
+		font-size: 12px;
+	}
+}
+
+
+@media (max-width: 767px) {
+	.site-header {
+		display: none;
+	}
+
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	footer p {
+
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 16px;
+
+	}
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	#note-detail-img h3 {
+		font-size: 26px;
+
+		width: 100%;
+	}
+
+	#notes-name h5 {
+		font-size: 14px;
+
+		width: 130%;
+	}
+
+	#notes-name {}
+
+	.btn-download {
+		width: 180px;
+		height: 40px;
+		font-size: 14px;
+	}
+
+	#note-detail-part-2 p {
+		font-size: 12px;
+	}
+
+	.details-style {
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	#custmers-reviews {
+		width: 400px;
+		height: auto;
+		float: left;
+		margin-left: 0;
+		margin-top: 45px;
+
+	}
+
+	#notes-pdf embed {
+		width: 300px;
+		float: center;
+
+	}
+
+	#custmers-reviews p {
+		font-size: 16px;
+	}
+
+	#custmers-reviews p span {
+		font-size: 14px;
+		font-weight: 300;
+	}
+
+	#custmers-reviews-1 {
+		padding: 15px 15px 0 15px;
+	}
+
+	#custmers-reviews-2 {
+		margin-top: -20px;
+		padding: 15px 15px 0 15px;
+	}
+
+	#custmers-reviews-3 {
+		margin-top: -20px;
+		padding: 15px 15px 0 15px;
+	}
+
+	#note-detail-part-2 h6 {
+		font-size: 12px;
+	}
+
+	#note-detail-img h4 {
+		margin-top: 0;
+	}
+
+	.modal-content {
+		margin-top: 100px;
+		height: auto;
+		padding: 30px;
+		width: 400px;
+
+	}
+
+	.modal-body h4 {
+		
+		font-size: 14px;
+		font-weight: 400;
+		
+	
+	}
+
+	.modal-body p {
+	
+		font-size: 14px;
+		font-weight: 400;
+		
+	}
+
+	.modal-content h5 {
+		
+		font-size: 22px;
+		font-weight: 400;
+		
+	}
+
+	.success-margin {
+		margin-left: 130px;
+	
+	}
+
+	.close-btn {
+	
+		position: absolute;
+		margin-top: -20px;
+		margin-left: 5px;
+	}
+
+
+
+
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	footer p {
+
+		font-size: 11px;
+		font-weight: 300;
+		line-height: 16px;
+
+	}
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	#note-detail-img h3 {
+		font-size: 26px;
+
+		width: 100%;
+	}
+
+	#notes-name h5 {
+		font-size: 14px;
+
+		width: 130%;
+	}
+
+	#notes-name {}
+
+	.btn-download {
+		width: 180px;
+		height: 40px;
+		font-size: 14px;
+	}
+
+	#note-detail-part-2 p {
+		font-size: 12px;
+	}
+
+	.details-style {
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	#custmers-reviews {
+		width: 300px;
+		height: auto;
+		float: left;
+		margin-left: 0;
+		margin-top: 45px;
+
+	}
+
+	#notes-pdf embed {
+		width: 300px;
+		float: center;
+
+	}
+
+	#custmers-reviews p {
+		font-size: 16px;
+	}
+
+	#custmers-reviews p span {
+		font-size: 14px;
+		font-weight: 300;
+	}
+
+	#custmers-reviews-1 {
+		padding: 5px 5px 0 5px;
+	}
+
+	#custmers-reviews-2 {
+		margin-top: -20px;
+		padding: 5px 5px 0 5px;
+	}
+
+	#custmers-reviews-3 {
+		margin-top: -20px;
+		padding: 5px 5px 0 5px;
+	}
+
+	#note-detail-part-2 h6 {
+		font-size: 12px;
+	}
+
+	#note-detail-img h4 {
+		margin-top: 0;
+	}
+		.modal-content {
+		margin-top: 20px;
+		height: auto;
+		padding: 30px;
+		width: 300px;
+
+	}
+
+	.modal-body h4 {
+		
+		font-size: 12px;
+		font-weight: 300;
+		
+	
+	}
+
+	.modal-body p {
+	
+		font-size: 12px;
+		font-weight: 300;
+		
+	}
+
+	.modal-content h5 {
+		
+		font-size: 20px;
+		font-weight: 400;
+		
+	}
+
+	.success-margin {
+		margin-left: 80px;
+	
+	}
+
+	.close-btn {
+	
+		position: absolute;
+		margin-top: -20px;
+		margin-left: 5px;
+	}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+@media (max-width: 320px) {}

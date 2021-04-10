@@ -1,0 +1,130 @@
+.content-box-lg {
+    padding: 0px 0;
+}
+
+.content-box-md {
+    padding: 0px 0;
+	
+}
+
+.content-box-sm {
+    padding: 0px 0;
+}
+html,
+body {
+    height: 100%;
+}
+section {
+    background: #fff;
+    overflow: hidden;
+}
+#member-details{
+	margin-top: 150px;
+}
+#member-details h4{
+	font-family: "open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #6255a5;
+	margin-bottom: 30px;
+}
+.vl{
+	height: 200px;
+	width: 0px;
+	border: 1px solid #d1d1d1;
+	margin-top: 10px;
+	margin-left: 30px;
+}
+#member-details p{
+	font-family: "open Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #333333;
+}
+#member-details p span{
+	color: #6255a5;
+	width: 100%;
+}
+
+.table-hover-1{
+	border: 1px solid #d1d1d1;
+}	
+
+.table-hover-1 tr:hover
+{
+  
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3)  ;
+  
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3)  ;
+}
+.table th,
+.table td
+{
+	font-family: "open Sans", sans-serif;
+}	
+.table td{
+	font-family: "open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+	height: 60px;
+	padding-top: 20px;
+
+	
+}	
+.table th{
+	color: #333333;
+	   font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+	
+}	
+.add-color{
+	color: #6255a5;
+}
+
+#member-details h6{
+	font-family: "open Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 22px;
+	color: #6255a5;
+	margin: 60px 0 30px 0;
+}
+
+footer{
+	margin-top: 30px;
+}
+
+
+
+
+.btn-logout{
+		 color: #6255a5;
+      background-color: #6255a5;
+      width: 89px;
+      height:40px;
+      border-radius: 3px;
+      color:#fff;
+      font-family: "open Sans", sans-serif;
+      font-size: 18px;
+      line-height: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

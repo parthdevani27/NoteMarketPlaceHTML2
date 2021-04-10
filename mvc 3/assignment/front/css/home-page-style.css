@@ -1,0 +1,242 @@
+html,body{
+  height: 100%;
+	width: 100%;
+}
+
+#home-bacground-img{
+	z-index: -2;
+top: 0;
+	margin-top: -80px;
+	height: 620px;
+	
+}
+#home-heading{
+	margin-top: -380px;
+}
+#home-heading h3{
+	 font-family: "open Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 54px;
+    color: #fff;
+	margin-bottom: 20px;
+}
+#home-heading p{
+	 font-family: "open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #fff;
+	margin-bottom: 20px;
+}
+#home-heading button{
+	color: #fff;
+	width: 172px;
+	height: 50px;
+	border-radius: 3px;
+	-webkit-text-decoration-color: #fff;
+	text-decoration-color: #fff;
+	font-family: "open Sans", sans-serif;
+	font-style: 600;
+	font-size: 18px;
+	line-height: 22px;
+	border-color: #fff;
+}
+#home-heading button a{
+		color: #fff;
+}
+#home-about{
+	margin-top: 60px;
+	width: 100%;
+}
+#home-about h3{
+		 font-family: "open Sans", sans-serif;
+    font-size:34px;
+    font-weight:600;
+    line-height: 38px;
+    color: #6255a5;
+	
+	
+
+}
+#home-about p{
+		 font-family: "open Sans", sans-serif;
+    font-size:18px;
+    font-weight:400;
+    line-height: 22px;
+    color: #333333;
+
+	
+}
+#how-it-works{
+	background-color: #f5f5f5;
+	width: 100%;
+		
+	
+}
+#how-it-works-heading{
+	 font-family: "open Sans", sans-serif;
+    font-size:34px;
+    font-weight:600;
+    line-height: 38px;
+    color: #6255a5;
+	text-align: center;
+	margin-top: 60px;
+	
+	margin-bottom: 40px;
+	width: 100%;
+}
+#download img,
+#sell-book img{
+	
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+	
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+	display: inline-block;
+	
+	
+	
+
+}
+#how-it-works-img{
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	background-color: #fff;
+	padding: 30px;
+	
+}
+#download h4,
+#sell-book h4{
+
+
+	
+	 font-family: "open Sans", sans-serif;
+    font-size:24px;
+    font-weight:600;
+    line-height: 28px;
+    color: #6255a5;
+}
+
+
+#download p,
+#sell-book p{
+	
+		 font-family: "open Sans", sans-serif;
+    font-size:18px;
+    font-weight:400;
+    line-height: 22px;
+    color: #333333;
+
+	width: 150%;
+}
+#download p span,
+#sell-book p span{
+	
+}
+.btn-how-it-works-1,
+.btn-how-it-works-2
+{
+	
+	height: 50px;
+	border-radius: 3px;
+	 font-family: "open Sans", sans-serif;
+	font-style: 18px;
+	color: #fff;
+	background-color: #6255a5;
+	margin-bottom: 60px;
+}
+.btn-how-it-works-2{ 
+	width: 172px;
+	
+}
+
+.btn-how-it-works-1{
+	width: 150px;
+
+	
+}
+.about-white-box-1,
+.about-white-box-2,
+.about-white-box-3,
+.about-white-box-4
+{
+	width: 500px;
+	height:auto
+	border-radius: 3px;
+	z-index: 2;
+	box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3);
+	padding: 20px;
+	
+}
+
+.about-white-box-3,
+.about-white-box-4{
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+#customers{
+	width: 100%;
+	
+}
+.customres-img{
+
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	
+}
+.customer-name h3{
+	
+	
+	font-family: "open Sans", sans-serif;
+    font-size:26px;
+    font-weight:600;
+    line-height: 36px;
+	color: #6255a5;
+}
+.customer-name h4{
+	
+
+	font-family: "open Sans", sans-serif;
+    font-size:16px;
+    font-weight:400;
+    line-height: 30px;
+	color: #333333;
+}
+.customer-name p {
+		font-family: "open Sans", sans-serif;
+    font-size:18px;
+    font-weight:400;
+    line-height: 28px;
+	color: #333333;
+	
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  margin:0;
+}
+
+
+.site-header .header-wrapper .logo-wrapper a{
+  color:#fff;
+
+}
+
+.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation>li a {
+ 
+    color: #fff;
+   
+
+}
+
+.dropdown-content a {
+
+	color: #333333 !important;
+}
+
+
+
+
+

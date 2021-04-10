@@ -1,0 +1,130 @@
+.content-box-lg {
+    padding: 0px 0;
+}
+
+.content-box-md {
+    padding: 0px 0;
+	
+}
+
+.content-box-sm {
+    padding: 0px 0;
+}
+html,
+body {
+    height: 100%;
+}
+section {
+    background: #fff;
+    overflow: hidden;
+}
+#my-profile h4{
+	font-family: "open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #6255a5;
+}
+#my-profile{
+	margin-top: 110px;
+}
+.add-border{
+	border: 1px solid #d1d1d1;
+	padding-top: 20px;
+	height: 110px;
+	display: inline-block;
+	width: 705px;
+}
+.btn-general{
+		background-color: #6255a5;
+	width: 150px;
+	height: 40px;
+	border-radius: 3px;
+	color: #fff;
+	font-family: "open Sans", sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	display: inline-block;
+	
+}
+input[type="text"],
+input[type="email"]
+
+{
+	width: 705px;
+	height: 50px;
+	font-family: "open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #333333;
+}
+#my-profile label{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+#my-profile select{
+	width: 100px;
+	 background-image: url("../img/assets/down-arrow.png");
+	background-size: auto;
+	height: 46px;
+	font-family: "open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #333333;
+	overflow: hidden;
+
+	
+	
+}
+
+input[type="number"]{
+		width: 600px;
+	height: 50px;
+	font-family: "open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #333333;
+	margin-left: 10px;
+	overflow: hidden;
+}
+#my-profile textarea{
+	font-family: "open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #333333;
+		width: 705px;
+	height: 150px;
+	overflow: hidden;
+	padding-top: 15px;
+	padding-left: 15px;
+	margin-bottom: 30px;
+}
+footer{
+	margin-top: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

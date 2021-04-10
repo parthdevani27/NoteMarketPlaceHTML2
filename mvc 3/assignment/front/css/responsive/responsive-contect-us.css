@@ -1,0 +1,209 @@
+@media (min-width: 768px){
+	
+
+}
+@media (min-width: 1200px) and (max-width: 1299px) {
+
+
+
+
+
+
+
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+	.background-img p {
+		font-size: 40px;
+	}
+
+	#contact-us textarea {
+		width: 400px;
+	}
+
+	.twitter {
+		margin-left: 0px;
+	}
+
+	.linkedin {
+		margin-left: 0px;
+	}
+
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+	.background-img p {
+		font-size: 35px;
+	}
+
+	#contact-us textarea {
+		width: 350px;
+	}
+
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+@media (max-width: 767px) {
+	.site-header {
+		display: none;
+	}
+
+	.background-img p {
+		font-size: 30px;
+	}
+
+	#contact-us textarea {
+		width: 220px;
+	}
+
+	.contact-heading {
+		font-size: 28px;
+	}
+
+	.contact-heading-p {
+		font-size: 14px;
+	}
+
+	#contact-us label {
+		font-size: 14px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	#contact-us textarea {
+		font-size: 14px;
+		font-weight: 300px;
+		line-height: 18px;
+	}
+
+	.btn-general {
+		width: 100px;
+		height: 40px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+	footer p{
+
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+
+	}
+
+
+
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+		.background-img p {
+		font-size: 30px;
+	}
+	
+
+	#contact-us textarea {
+		width: 130px;
+		height: 100px;
+	}
+
+	.contact-heading {
+		font-size: 28px;
+	}
+
+	.contact-heading-p {
+		font-size: 14px;
+	}
+
+	#contact-us label {
+		font-size: 12px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	#contact-us textarea {
+		font-size: 12px;
+		font-weight: 300px;
+		line-height: 18px;
+	}
+
+	.btn-general {
+		width: 100px;
+		height: 40px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+	footer p{
+
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 16px;
+
+	}
+	
+}
+
+
+
+
+@media (max-width: 320px) {}

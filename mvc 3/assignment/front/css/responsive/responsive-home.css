@@ -1,0 +1,383 @@
+@media (min-width: 768px){
+
+}
+@media (min-width: 1200px) and (max-width: 1299px) {
+
+
+
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+	.twitter {
+		margin-left: 0px;
+	}
+
+	.linkedin {
+		margin-left: 0px;
+	}
+
+	#home-bacground-img {
+		z-index: -2;
+		padding-left: 0;
+		height: 620px;
+
+	}
+
+	#home-heading {
+		margin-top: -380px;
+	}
+
+	#home-heading h3 {
+		font-size: 40px;
+		font-weight: 600;
+		line-height: 50px;
+	}
+
+	#home-heading p {
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 30px;
+	}
+
+	#home-heading button {
+		width: 172px;
+		height: 50px;
+		font-style: 600;
+		font-size: 18px;
+	}
+
+	#sell-book {
+		margin-left: -50px;
+	}
+
+	#download {
+		margin-left: 50px;
+	}
+
+	.about-white-box-1,
+	.about-white-box-2,
+	.about-white-box-3,
+	.about-white-box-4 {
+		width: 450px;
+	}
+
+	.about-white-box-3,
+	.about-white-box-4 {
+		margin-top: 25px;
+	}
+
+
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+		#home-bacground-img {
+		z-index: -2;
+		padding-left: 0;
+		height: 620px;
+
+	}
+
+	#home-heading {
+		margin-top: -380px;
+	}
+
+	#home-heading h3 {
+		font-size: 35px;
+		font-weight: 600;
+		line-height: 50px;
+	}
+
+	#home-heading p {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 28px;
+	}
+
+	#home-heading button {
+		width: 150px;
+		height: 50px;
+		font-size: 18px;
+	}
+	#home-about h3{font-size: 30px;}
+	#home-about p{font-size: 14px;}
+	#how-it-works-heading{font-size: 30px;}
+	#sell-book {
+		margin-left: -70px;
+		
+	}
+
+	#download {
+		margin-left: 50px;
+	}
+	#how-it-works-img{
+	width: 120px;
+		height: 120px;
+	}
+	#download h4,
+	#sell-book h4{
+		font-size: 20px;
+	}
+	#download p,
+	#sell-book p{
+		font-size: 15px;
+	}
+
+	.about-white-box-1,
+	.about-white-box-2,
+	.about-white-box-3,
+	.about-white-box-4 {
+		width: 350px;
+	}
+
+	.about-white-box-3,
+	.about-white-box-4 {
+		margin-top: 25px;
+	}
+	.customer-name h3{font-size: 22px}
+	.customer-name h4{font-size: 14px;}
+	.customer-name p{font-size: 14px;}
+	.customres-img img{
+		width: 70px;
+		height: 70px;
+	}
+
+}
+
+
+@media (max-width: 767px) {
+	.site-header {
+		display: none;
+	}
+
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	footer p {
+
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 16px;
+
+	}
+
+		#home-bacground-img {
+		z-index: -2;
+		padding-left: 0;
+		height: 620px;
+
+	}
+
+	#home-heading {
+		margin-top: -380px;
+	}
+
+	#home-heading h3 {
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 44px;
+	}
+
+	#home-heading p {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+
+	#home-heading button {
+		width: 130px;
+		height: 50px;
+		font-size: 14px;
+	}
+	#home-about h3{font-size: 30px;}
+	#home-about p{font-size: 14px;}
+	#how-it-works-heading{font-size: 30px;}
+	#sell-book {
+	margin-left: 50px;
+		
+	}
+
+	#download {
+		margin-left: 50px;
+	}
+	#how-it-works-img{
+	width: 120px;
+		height: 120px;
+	}
+	#download h4,
+	#sell-book h4{
+		font-size: 20px;
+	}
+	#download p,
+	#sell-book p{
+		font-size: 15px;
+	}
+
+	.about-white-box-1,
+	.about-white-box-2,
+	.about-white-box-3,
+	.about-white-box-4 {
+		width: 350px;
+		margin-top: 30px;
+	}
+
+
+	.customer-name h3{font-size: 22px}
+	.customer-name h4{font-size: 14px;}
+	.customer-name p{font-size: 14px;}
+	.customres-img img{
+		width: 70px;
+		height: 70px;
+	}
+
+
+
+
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	footer p {
+
+		font-size: 11px;
+		font-weight: 300;
+		line-height: 16px;
+
+	}
+
+		#home-bacground-img {
+		z-index: -2;
+		padding-left: 0;
+		height: 620px;
+
+	}
+
+	#home-heading {
+		margin-top: -380px;
+	}
+
+	#home-heading h3 {
+		font-size: 26px;
+		font-weight: 400;
+		line-height: 44px;
+	}
+
+	#home-heading p {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+
+	#home-heading button {
+		width: 120px;
+		height: 40px;
+		font-size: 14px;
+	}
+	#home-about h3{ font-size: 26px;}
+	#home-about p{ font-size: 13px;}
+	#how-it-works-heading{font-size: 26px;}
+	#sell-book {
+	margin-left: 50px;
+		
+	}
+
+	#download {
+		margin-left: 50px;
+	}
+	#how-it-works-img{
+	width: 120px;
+		height: 120px;
+	}
+	#download h4,
+	#sell-book h4{
+		font-size: 18px;
+	}
+	#download p,
+	#sell-book p{
+		font-size: 14px;
+	}
+	.btn-how-it-works-1,
+	.btn-how-it-works-2{
+		height: 40px;
+		width: 120px;
+	}
+
+	.about-white-box-1,
+	.about-white-box-2,
+	.about-white-box-3,
+	.about-white-box-4 {
+		width: 300px;
+		margin-top: 30px;
+	}
+
+
+	.customer-name h3{font-size: 20px}
+	.customer-name h4{font-size: 13px;}
+	.customer-name p{font-size: 13px;}
+	.customres-img img{
+		width: 70px;
+		height: 70px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+@media (max-width: 320px) {}

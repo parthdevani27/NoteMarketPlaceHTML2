@@ -1,0 +1,145 @@
+@media (min-width: 1200px) and (max-width: 1299px) {
+	#forgot-pwd,
+	#change-pwd,#sign-up
+	{
+		margin-left: 340px;
+	}
+
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+	#forgot-pwd,
+	#change-pwd,#sign-up {
+		margin-left: 230px;
+	}
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+	#forgot-pwd,
+	#change-pwd,#sign-up {
+		margin-left: 90px;
+	}
+
+
+}
+
+@media (max-width:767px) {
+		#forgot-pwd,
+	#change-pwd,#sign-up {
+		margin-left: -60px;
+	}
+
+}
+@media (max-width:640px) {
+		#forgot-pwd,
+	#change-pwd,#sign-up {
+		margin-left: 15px;
+			
+	}
+	#white-box,#change-pwd-white-box,#sign-up-white-box{
+		width:450px;
+	}
+	input[type="email"],
+	input[type="password"],
+	input[type="text"]{
+		width: 370px;
+	}
+	.btn-general{
+		width: 370px;
+	}
+	#forgot-pwd-top-logo,
+	 #change-pwd-top-logo,#sign-up-top-logo{
+		margin-left: 100px;
+	}
+}
+
+
+@media (max-width:480px) {
+		#forgot-pwd,#change-pwd,#sign-up  {
+		margin-left: 40px;
+			
+	}
+	#white-box,#change-pwd-white-box,#sign-up-white-box{
+		width:260px;
+	}
+	input[type=email],
+	input[type="password"],
+	input[type="text"]{
+		width: 210px;
+		margin-left: 27px;
+	}
+	.btn-general{
+		width: 210px;
+		margin-left: 30px;
+	}
+	#forgot-pwd-top-logo, #change-pwd-top-logo,#sign-up-top-logo{
+		margin-left: 5px;
+	}
+	 #email{
+		 margin-left: 30px;
+	}
+	#last-name{
+		 margin-left: 30px;
+	}
+	#first-name{
+		 margin-left: 30px;
+	}
+	.pwd-lable{
+		margin-left: 30px;
+	}
+	#sign-up-heading h3{
+	   
+    font-size: 19px;
+  
+	}
+	#forgot-pwd-heading h2,#sign-up-heading h2{
+		font-size: 27px;
+	}
+	#forgot-pwd-heading p,sign-up-heading p{
+		font-size: 12px;
+	}
+
+
+
+
+
+	
+	}
+@media (max-width: 320px) {
+			#forgot-pwd,#change-pwd,#sign-up  {
+		margin-left: 40px;
+			
+	}
+	#white-box,#change-pwd-white-box,#sign-up-white-box{
+		width:260px;
+	}
+	input[type=email],
+	input[type="password"],
+	input[type="text"]{
+		width: 210px;
+		margin-left: 27px;
+	}
+	.btn-general{
+		width: 210px;
+		margin-left: 30px;
+	}
+	#forgot-pwd-top-logo, #change-pwd-top-logo,#sign-up-top-logo{
+		margin-left: 5px;
+	}
+	 #email{
+		 margin-left: 30px;
+	}
+	#last-name{
+		 margin-left: 30px;
+	}
+	#first-name{
+		 margin-left: 30px;
+	}
+	.pwd-lable{
+		margin-left: 30px;
+	}
+	
+	
+}
+

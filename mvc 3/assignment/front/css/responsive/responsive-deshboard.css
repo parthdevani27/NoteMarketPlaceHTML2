@@ -1,0 +1,293 @@
+@media (min-width: 768px){
+	
+
+}
+
+
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+
+
+	input[type="text"] {
+		width: 200px;
+	}
+
+	.pagination li a {
+		font-size: 16px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 32px;
+		height: 32px;
+
+	}
+
+
+
+
+
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+	.twitter {
+		margin-left: 0px;
+	}
+
+	.linkedin {
+		margin-left: 0px;
+	}
+
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	input[type="text"] {
+		width: 250px;
+		margin-left: -30px;
+	}
+
+
+
+	#dashboard-heading h4 {
+		font-size: 30px;
+	}
+
+	#dashboard-heading button {
+		width: 130px;
+		height: 40px;
+		font-size: 16px;
+	}
+
+	#box-1 {
+		width: 130px;
+		height: 140px;
+	}
+
+	#box-1 p {
+	
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+
+	#box-2 {
+		width: 370px;
+		height: 140px;
+		margin-left: 150px;
+	}
+
+
+	#box-5,
+	#box-3,
+	#box-4 {
+		width: 120px;
+		height: 140px;
+	
+	
+		margin-left: 10px;
+		padding: 20px 0 0 20px;
+		
+	}
+	.data-style-1{
+	
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+   
+	}
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	input[type="text"] {
+		width: 150px;
+	}
+
+	.table th,
+	.table td {
+		font-size: 14px;
+	}
+	
+	#dashboard-heading h4 {
+		font-size: 28px;
+	}
+
+	#dashboard-heading button {
+		width: 120px;
+		height: 40px;
+		font-size: 16px;
+	}
+
+
+}
+
+
+@media (max-width: 767px) {
+	.site-header {
+		display: none;
+	}
+
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	footer p {
+
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 16px;
+
+	}
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+	.page-item {
+		margin-left: 10px;
+	}
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	input[type="text"] {
+		width: 150px;
+	}
+
+	.table th,
+	.table td {
+		font-size: 14px;
+	}
+
+	.pagination {
+		margin-left: 100px;
+
+	}
+
+
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+	.facebook {
+		margin-left: -30px;
+	}
+
+	.twitter {
+		margin-left: -20px;
+	}
+
+	.linkedin {
+		margin-left: -10px;
+	}
+
+	footer p {
+
+		font-size: 11px;
+		font-weight: 300;
+		line-height: 16px;
+
+	}
+
+	.pagination li a {
+		font-size: 14px;
+	}
+
+
+
+	.pagination li a.active {
+		width: 28px;
+		height: 28px;
+		padding: 3px;
+	}
+
+	input[type="text"] {
+		width: 120px;
+	}
+
+	.table th,
+	.table td {
+		font-size: 14px;
+	}
+
+	.progress-heading p {
+		font-size: 20px;
+	}
+
+
+
+
+
+
+
+}
+
+
+
+
+@media (max-width: 320px) {}
