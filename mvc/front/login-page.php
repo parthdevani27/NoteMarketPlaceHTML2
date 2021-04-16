@@ -108,7 +108,7 @@ if(isset($_GET['updatepwd'])){
 					echo "<script>alert('Please verify eamil address via clicking on the link we send you via email')</script>";
 			}
 						} else {
-							$_SESSION['Email'] =  $email;
+						$_SESSION['Email'] =  $email;
 						$_SESSION['ID'] =  $db_id;
 						$_SESSION['RoleID'] =  $db_roleid;
 						$_SESSION['firstname'] =  $db_firstname;
@@ -175,7 +175,7 @@ if(isset($_GET['updatepwd'])){
 						
 						<div class="col-md-12 col-sm-12">
 								<label  id="email-1">Email</label>
-								<input type="email" name="email" class="form-control"  aria-describedby="emailHelp" placeholder="notesmarketplace@gmail.com" required>
+								<input id="email" type="email" name="email" class="form-control"  aria-describedby="emailHelp" placeholder="notesmarketplace@gmail.com" required>
 								</div>
 								
 								
@@ -207,13 +207,13 @@ if(isset($_GET['updatepwd'])){
 						
 						
 						<div class="col-md-12 col-sm-12">
-							 <button type="submit" name="login" class="btn btn-block btn-general">Login</button>
+							 <button onclick="return validation()" type="submit" name="login" class="btn btn-block btn-general">Login</button>
 						</div>
 						
 						
 						<div class="col-md-12 col-sm-12">
 						  <div class="bottom-text">
-							  <p class="text-center">Don't Have Account? <a href="sign-up.php">Sign up</a></p>
+							  <p class="text-center">Don't Have Account? <a href="sign-up.php" class="sign-uplink">Sign up</a></p>
 							  </div>
 						</div>
 						<div class="col-md-12 col-sm-12"></div>
@@ -232,7 +232,23 @@ if(isset($_GET['updatepwd'])){
 	<!-- Bootstrap JS -->
 	<script src="js/bootstrap/bootstrap.min.js"></script>
 	<!-- link js file-->
+	
+	
+<script>
+	function validation(){
+	var a = $("#email").val();
+		var b = $(".toggle-pwd").val();
 
+if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(a))
+  {
+    return (true);
+  } else {
+	  alert("Please enter valid email");
+	  return (false); 
+  }
+}
+
+</script>
 	<script src="js/script.js"></script>
 </body>
 </html>

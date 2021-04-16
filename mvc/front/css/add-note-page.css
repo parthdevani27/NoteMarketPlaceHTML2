@@ -1,19 +1,24 @@
 .content-box-lg {
     padding: 0px 0;
+	overflow: hidden;
 }
 
 .content-box-md {
     padding: 0px 0;
-	
+	overflow: hidden;
 }
 
 .content-box-sm {
     padding: 0px 0;
+	overflow: hidden;
 }
-
+body{
+	overflow-x: hidden;
+}
 html,
 body {
     height: 100%;
+
 	
 }
 

@@ -65,5 +65,3 @@ jQuery(window).scroll(function () {
 
 
 
-
-

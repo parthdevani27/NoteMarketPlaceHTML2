@@ -194,26 +194,26 @@ if(isset($_POST['sign_up'])){
 							
 								<div class="col-md-12 col-sm-12 col-12">
 									<label  id="first-name">First name</label>
-									<input type="text" name="firstname" pattern=".*[^0-9].*.{1,}" title="Must contain 2 or more characters  and not only number" class="form-control"  placeholder="Enter your first name"  required>
+									<input id="first-name2" type="text" pattern=".*[^0-9].*.{1,}" name="firstname" title="Must contain 2 or more characters  and not only number" class="form-control"  placeholder="Enter your first name"  required>
 								</div>
 								
 								
 								<div class="col-md-12 col-sm-12 col-12">
 									<label id="last-name">Last name</label>
-									<input type="text" name="lastname" pattern=".*[^0-9].*.{1,}" title="Must contain 2 or more characters and not only number" class="form-control  validate"  placeholder="Enter your last name"  required>
+									<input id="last-name2" type="text" name="lastname" pattern=".*[^0-9].*.{1,}" title="Must contain 2 or more characters and not only number" class="form-control  validate"  placeholder="Enter your last name"  required>
 								</div>
 								
 								
 								<div class="col-md-12 col-sm-12 col-12">
 								<label id="email">Email</label>
-									<input type="email" name="email" class="form-control"  aria-describedby="emailHelp"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email address" required>
+									<input id="email2" type="email" name="email" class="form-control"  aria-describedby="emailHelp"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email address" required>
 								</div>
 								
 								
 								<div class="col-md-12 col-sm-12 col-12">
 								
 										<label  class="pwd-lable">Password</label>
-										<input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,24}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 6 or more characters" class="form-control toggle-pwd" placeholder="Enter Your  Password" required>
+										<input id="pwd" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,24}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 6 or more characters" class="form-control toggle-pwd" placeholder="Enter Your  Password" required>
 										<span toggle="#password-field-3" class="eye field-icon toggle-password"><img src="images/pre-login/eye.png" alt="eye" class="eye-icon" ></span>
 										
 									
@@ -231,7 +231,7 @@ if(isset($_POST['sign_up'])){
 						
 						
 								<div class="col-md-12 col-sm-12 col-12">
-									<button name="sign_up" type="submit" class="btn btn-block btn-general">SIGN UP</button>
+									<button onclick="return validation()" name="sign_up" type="" class="btn btn-block btn-general">SIGN UP</button>
 								</div>
 							     
 							     
@@ -239,7 +239,7 @@ if(isset($_POST['sign_up'])){
 							     
 								     <div class="col-md-12 col-sm-12">
                                 <div id="signup-link">
-                                    <p class="text-center">Already have an account Have Account? <a href="login-page.php">Login</a></p>
+                                    <p class="text-center">Already have an account Have Account? <a href="login-page.php" class="login-link">Login</a></p>
                                 </div>
 							</div>
 						</div>
@@ -265,6 +265,53 @@ if(isset($_POST['sign_up'])){
 	<!-- Bootstrap JS -->
 	<script src="js/bootstrap/bootstrap.min.js"></script>
 	<!-- link js file-->
+	
+<script>
+	function validation(){
+	var a = $("#email2").val();
+	var b = $("#first-name2").val();
+	var c = $("#last-name2").val();
+	var d = $(".toggle-pwd").val();
+		
+	  var flag = true;			
+if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(a) && /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/.test(d))
+  {
+ 
+  } else {
+	  alert("Please enter valid email or password format");
+	  var flag = false;
+  }
+		if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(a)){	
+		} else {
+			alert("Please enter valid email format");
+		  var flag = false;
+		}
+		if (/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/.test(d)){	
+		} else {
+			alert("Please enter valid  password format");
+		  var flag = false;
+		}
+		
+if(b.length < 2){
+	alert("name Must contain 2 or more characters  and not only number ");
+	var flag = false;
+} 
+if(c.length < 2){
+	alert("name Must contain 2 or more characters  and not only number ");
+	var flag = false;
+} 
+		return (flag);
+		
+
+
+
+}
+
+</script>
+	
+	
+	
+	
 	<script src="js/script.js"></script>
 
 

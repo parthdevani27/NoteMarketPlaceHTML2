@@ -82,7 +82,7 @@ $query =	"INSERT INTO `sellernotes` ( `SellerID`, `Status`, `ActionedBy`, `Admin
 		$insert_data_for_addbook_query = mysqli_query($connection,$query);
 		confirmq($insert_data_for_addbook_query);
 		
-		header("Location: edit-note-page.php?editnote=$lastnoteid");
+		header("Location: Dashboard%20Page.php");
 
 	
 

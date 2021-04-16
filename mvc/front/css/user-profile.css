@@ -6,6 +6,9 @@
 	margin: 0px;
 	
 }
+body{
+	overflow-x: hidden;
+}
 html,body{
   height: 100%;
 }

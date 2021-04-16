@@ -189,8 +189,17 @@
 							$university = $row['UniversityName'];
 							$noteimage = $row['DisplayPicture'];
 							$publishdate = $row['PublishedDate'];
-						
-						
+							$publishdate = $row['PublishedDate'];
+							$img 		= $row['DisplayPicture'];
+							$sellerid	 	= $row['SellerID'];
+							$img_path ="images/Search/1.jpg";
+	if(!empty($img)){
+		if(file_exists("member/$sellerid/$id/$img")){
+	$img_path = "member/$sellerid/$id/$img";
+		} 
+	}
+		
+	
 						
 						
 						
@@ -202,7 +211,7 @@
 							<div id="book-img-1">
 								<div class="book-box">
 									<div class="book-img">
-										<a href="note-details.php?noteid=<?php echo $id;?>"><img src="upload/displaypicture/<?php echo $noteimage; ?>" alt="img" class="img-responsive"></a>
+										<a href="note-details.php?noteid=<?php echo $id;?>"><img src="<?php echo $img_path; ?>" alt="img" class="img-responsive"></a>
 									</div>
 									<div class="book-details">
 										<h4 class="book-heading-1"><a href="note-details.php?noteid=<?php echo $id;?>"><?php echo $title;

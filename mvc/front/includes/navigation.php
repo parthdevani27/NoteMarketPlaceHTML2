@@ -28,7 +28,7 @@
                       <a href="search-page.php">search notes</a>
                     </li>
                     <li>
-                      <a href="add-note-page.php">sell your notes</a>
+                      <a href="Dashboard%20Page.php">sell your notes</a>
                     </li>
                     <li>
                       <a href="buyer-request-page.php">buyer request</a>
@@ -45,7 +45,7 @@
                     </li>
                      <li>
                      <?php 
-						if(isset($_SESSION['Email'])){
+							if(isset($_SESSION['Email'])){
 							echo "<a href='includes/logout.php'><button type='button' class='btn btn-block btn-header'>Logout</button></a>";
 						} else {
 							echo "<a href='login-page.php'><button type='button' class='btn btn-block btn-header'>Login</button></a>";
