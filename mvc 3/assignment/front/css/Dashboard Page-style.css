@@ -45,6 +45,9 @@ section {
 	line-height: 22px;
 	font-style: bold(700);
 }
+#dashboard-heading a{
+	float: right;
+}
 #earning-box{
 	margin-bottom: 60px;
 }

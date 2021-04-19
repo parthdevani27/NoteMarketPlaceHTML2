@@ -2,10 +2,12 @@ html,body{
   height: 100%;
 	width: 100%;
 }
-
+body{
+	overflow-x: hidden;
+}
 #search-bacground-img{
 	height: 250px;
-	margin-top: 90px;
+	margin-top: 45px;
 	
 	
 }
@@ -105,8 +107,12 @@ input[type="text"]{
     color: #6255a5;
 	width: 100%;
 	margin-top: 30px;
+	text-decoration: none;
 }
-
+.title-link,.title-link:hover{
+	color: #6255a5;
+	text-decoration: none;
+}
 .book-img img{
 	width: 370px;
 	height: 253px;

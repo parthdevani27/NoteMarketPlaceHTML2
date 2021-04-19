@@ -10,11 +10,12 @@
 .content-box-sm {
     padding: 0px 0;
 }
-
+body{
+	overflow-x: hidden;
+}
 html,
 body {
     height: 100%;
-	
 }
 
 section {

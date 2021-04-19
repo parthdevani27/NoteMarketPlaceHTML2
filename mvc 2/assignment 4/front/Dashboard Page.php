@@ -2,12 +2,26 @@
 <?php  include "includes/db.php"; ?>
 <?php  include "includes/functions.php"; ?>
 <?php session_start(); ?>
+<?php $page='dashboard'; ?>
+<?php
+if(isset($_SESSION['ID'])){
+	$userid = $_SESSION['ID']; 
+} else {	
+	redirect();
+}
+?>
 <?php
 if(isset($_GET['delete'])){
 	$d_id=$_GET['delete'];
+	
+	$query = "DELETE  FROM sellernotesattachements WHERE NoteID=$d_id";
+	$delete_draft_query=mysqli_query($connection,$query);
+	confirmq($delete_draft_query);
+	
 	$query = "DELETE  FROM Sellernotes WHERE ID=$d_id";
 	$delete_draft_query=mysqli_query($connection,$query);
 	confirmq($delete_draft_query);
+	
 }
 ?>
 	<title>Dashboard</title>
@@ -27,7 +41,7 @@ if(isset($_GET['delete'])){
 					<div class="col-md-12 col-sm-12 col-12">
 						<div id="dashboard-heading">
 							<h4>Dashboard</h4>
-							<button type="button" class="btn btn-block btn-general btn-add-note">ADD NOTE</button>
+							<a href="add-note-page.php"><button type="button" class="btn btn-block btn-general btn-add-note">ADD NOTE</button></a>
 						</div>
 					</div>
 					<div class=" col-md-12 col-sm-12 col-12">
@@ -42,40 +56,45 @@ if(isset($_GET['delete'])){
 								<div id="box-2">
 									<div class="left-side-l text-left">
 										<p><span class="data-style">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										<?php echo totalcountwithdata('downloads','IsAttachmentDownloaded',1,'Seller'); ?></span></p>
+									
+										<a class='add-color' href='soldnotes.php'>3</a>	</span></p>
 										<p class="data-style-1">Number of Notes Sold</p>
 									</div>
 									<div class="right-side-r text-right">
 										<p><span class="data-style"> 
-<?php 
-$userid = $_SESSION['ID'];
-$query = "SELECT SUM(PurchasedPrice) AS TotalEarn FROM downloads WHERE Seller=$userid AND IsAttachmentDownloaded=1";
-$total_earning_query=mysqli_query($connection,$query);
-confirmq($total_earning_query);
-$row = mysqli_fetch_assoc($total_earning_query);											
-$total_earning = $row['TotalEarn'];
-echo "$".$total_earning;
-?>
-											
+
+				<a class='add-color' href='soldnotes.php'>$3</a>							
 											</span></p>
 										<p class="data-style-1">Money Earned</p>
 									</div>
 								</div>
 								
 								<div id="box-3">
-									<p><span class="data-style">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo totalcountwithdata('downloads','IsAttachmentDownloaded',1,'Downloader'); ?></span></p>
+									<p><span class="data-style">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a class='add-color' href='downloads.php'>3</a>			
+									</span></p>
 									<p class="data-style-1">My Downloads</p>
 								</div>
 							
 							
 								<div id="box-4">
-									<p><span class="data-style">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo totalcountwithdata('Sellernotes','Status',12); ?></span></p>
+									<p><span class="data-style">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									
+			
+									<a class='add-color' href='rejected_notes.php'>3
+									</a>
+									
+									</span></p>
 									<p class="data-style-1">My Rejected &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notes</p>
 								</div>
 							
 							
 								<div id="box-5">
-									<p><span class="data-style">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo totalcountwithdata('downloads','IsSellerHasAllowedDownload',0,'Seller'); ?></span></p>
+									<p><span class="data-style">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a class='add-color' href='buyer-request-page.php'>
+									4
+									</a>
+									</span></p>
 									<p class="data-style-1">Buyer Request</p>
 								</div>
 							
@@ -120,19 +139,7 @@ echo "$".$total_earning;
 									</tr>
 								</thead>
 								<tbody>
-<!--
-									<tr>
-										<td>09-10-2020</td>
-										<td>Data Science</td>
-										<td>Science</td>
-										<td>Draft</td>
-										<td>&nbsp;&nbsp;&nbsp;<img src="images/Dashboard/edit.png" alt="img" class="img-responsive">&nbsp;&nbsp;
-											<img src="images/Dashboard/delete.png" alt="img" class="img-responsive">
-										</td>
-
-									</tr>
---> 
-								
+							
 
 
 <?php 
@@ -166,11 +173,11 @@ while($row = mysqli_fetch_assoc($buyer_request_query)){
 										<td><?php echo $category; ?></td>
 										<td><?php echo $Status ?></td>
 										<?php 
-										if($Status == 'Draft'){
-											echo "<td>&nbsp;&nbsp;&nbsp;<a href='edit-note-page.php?editnote=$n_id'><img src='images/Dashboard/edit.png' alt='img' class='img-responsive editnotes'></a>&nbsp;&nbsp;
-											<a href='Dashboard Page.php?delete=$n_id'><img src='images/Dashboard/delete.png' alt='img' class='img-responsive deletenotes'></a>
-										</td>";
-										} else {
+										if($Status == 'Draft'){ ?>
+											<td>&nbsp;&nbsp;&nbsp;<a href='edit-note-page.php?editnote=<?php echo $n_id; ?>'><img src='images/Dashboard/edit.png' alt='img' class='img-responsive editnotes'></a>&nbsp;&nbsp;
+											<a onclick='return confirm("Are you sure you want to delete this note?")' href='Dashboard Page.php?delete=<?php echo $n_id; ?>'><img src='images/Dashboard/delete.png' alt='img' class='img-responsive deletenotes'></a>
+										</td>;
+										<?php } else {
 											
 										echo "<td>&nbsp;&nbsp;&nbsp;&nbsp;<a href='note-details.php?noteid=$n_id'><img src='images/Dashboard/eye.png' alt='img' class='img-responsive viewnotes'></a></td>";
 										}
@@ -183,7 +190,6 @@ while($row = mysqli_fetch_assoc($buyer_request_query)){
 						</div>
 							</div>
 						</div>
-					
 					</div>	
 					<div id="published-notes" >
 						
@@ -221,18 +227,6 @@ while($row = mysqli_fetch_assoc($buyer_request_query)){
 									</tr>
 								</thead>
 								<tbody>
-<!--
-									<tr>
-										<td>09-10-2020</td>
-										<td>Data Science</td>
-										<td>Science</td>
-										<td>PAID</td>
-										<td>$575</td>
-										<td>&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/Dashboard/eye.png" alt="img" class="img-responsive">
-										</td>
-
-									</tr>
--->
 <?php 
 
 $query = "SELECT  Sellernotes.ID AS noteid ,Sellernotes.SellerID,Sellernotes.Status,Sellernotes.Title,Sellernotes.Category,Sellernotes.PublishedDate,Sellernotes.NoteType,Sellernotes.SellingPrice,Sellernotes.IsPaid,referencedata.Value,notecategories.Name FROM Sellernotes LEFT JOIN notecategories ON Sellernotes.Category=notecategories.ID LEFT JOIN referencedata ON Sellernotes.Status=referencedata.ID WHERE Sellernotes.Status=11 AND Sellernotes.SellerID = $userid"; 
@@ -327,6 +321,7 @@ while($row = mysqli_fetch_assoc($buyer_request_query)){
 
 	<!-- link jquery file-->
 	<script src="js/jquery.min.js"></script>
+	<script src="js/datatables.min.js"></script>
 	<script src="js/datatables.min.js"></script>
 	<!-- Bootstrap JS -->
 	<script src="js/bootstrap/bootstrap.min.js"></script>

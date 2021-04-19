@@ -43,7 +43,7 @@
                       <a href="search-page.php">search notes</a>
                     </li>
                     <li>
-                      <a href="add-note-page.php">sell your notes</a>
+                      <a href="Dashboard%20Page.php">sell your notes</a>
                     </li>
               
 				
@@ -71,7 +71,7 @@
 												$path = "images/User-Profile/defaultprofile.jpg";
 											}
 											
-												echo "<img style='border-radius: 60px;'  width='60px' height='60px' src='$path' alt='img' class='img-responsive'>";
+												echo "<img style='border-radius: 60px;'  width='60px' height='60px' src='images/User-Profile/defaultprofile.jpg' alt='img' class='img-responsive'>";
 										?>
 										 
 										  

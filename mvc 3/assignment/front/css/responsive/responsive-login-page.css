@@ -20,13 +20,16 @@
 	margin-top: 10px;
 */
 }
+	#white-box{
+		margin-left: 170px;
+	}
 }
 
 
 @media (min-width: 768px) and (max-width: 991px) {
 
 	#white-box{
-		margin-left: 0;
+		margin-left: 60px;
 	}
 	
 }
@@ -35,7 +38,7 @@
 @media (max-width: 767px) {
 	
 #white-box{
-		margin-left: 0;
+		margin-left: 25px;
 	width: 460px;
 	}
 	.btn-general{
@@ -67,8 +70,11 @@
 
 @media (max-width: 480px) {
 #white-box{
-		margin-left: 0;
+		margin-left: 10px;
 	width: 300px;
+	}
+	#forgot-pwd-top-logo{
+		margin-left: 0px;
 	}
 	.btn-general{
 			width: inherit;

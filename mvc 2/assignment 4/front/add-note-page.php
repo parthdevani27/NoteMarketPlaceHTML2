@@ -79,8 +79,8 @@ if(!empty($_FILES['noteprevie']['name'])){
 
 
 	
-$query =	"INSERT INTO `sellernotes` ( `SellerID`, `Status`, `PublishedDate`, `Title`, `Category`, `DisplayPicture`, `NoteType`, `NumberofPages`, `Description`, `UniversityName`, `Country`, `Course`, `CourseCode`, `Professor`, `IsPaid`, `SellingPrice`, `NotesPreview`, `CreatedDate`, `CreatedBy`) VALUES
-($sellerid, 8, now(), '$title', $category, '$profile_picture', $notetype, {$numofpage}, '$description', '$institution',$country, '$courcename', '$courcecode', '$professor',$sellfor, $sellprice, '$preview_cv', now(), $sellerid)";
+$query =	"INSERT INTO `sellernotes` ( ID,`SellerID`, `Status`, `PublishedDate`, `Title`, `Category`, `DisplayPicture`, `NoteType`, `NumberofPages`, `Description`, `UniversityName`, `Country`, `Course`, `CourseCode`, `Professor`, `IsPaid`, `SellingPrice`, `NotesPreview`, `CreatedDate`, `CreatedBy`) VALUES
+($lastnoteid,$sellerid, 8, now(), '$title', $category, '$profile_picture', $notetype, {$numofpage}, '$description', '$institution',$country, '$courcename', '$courcecode', '$professor',$sellfor, $sellprice, '$preview_cv', now(), $sellerid)";
 	
 	
 	$insert_data_for_addbook_query = mysqli_query($connection,$query);
@@ -110,7 +110,7 @@ for( $i=0 ; $i < $total ; $i++ ) {
 }
 	
 
-		header("Location: edit-note-page.php?editnote=$lastnoteid");
+		header("Location: Dashboard%20Page.php");
 }
 } else {
 	redirect();

@@ -6,7 +6,9 @@
     padding: 0px 0;
 	
 }
-
+body{
+	overflow-x: hidden;
+}
 .content-box-sm {
     padding: 0px 0;
 }
@@ -22,7 +24,7 @@ section {
     overflow: hidden;
 }
 .background-img {
-	margin-top: 80px;
+	margin-top: 45px;
 }
 .background-img img{
 	position: absolute;

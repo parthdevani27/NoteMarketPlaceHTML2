@@ -47,9 +47,9 @@ if(isset($_GET['delete'])){
 					<div class=" col-md-12 col-sm-12 col-12">
 						<div id="dashboard-earning-details">
 							<div id="earning-box">
-							
+						
 								<div id="box-1">
-									<img src="images/Dashboard/earning-icon.svg" alt="img" class="img-responsive">
+									<img src="images/Dashboard/earning-icon.svg" alt="img" class="img-responsive"><br>
 									<p>My Earning</p>
 								</div>
 							
@@ -209,7 +209,7 @@ while($row = mysqli_fetch_assoc($buyer_request_query)){
 							</div>
 							<div class="col-md-3 col-sm-4 col-5">
 								<div class="search-bar" class="text-right">
-									<input type="text" name="search1" class="searchbox-2 form-control" id="validationDefault01" placeholder="     Search">
+									<input type="text" name="search1" class="searchbox-2 form-control" id="validationDefault02" placeholder="     Search">
 
 								</div>
 							</div>

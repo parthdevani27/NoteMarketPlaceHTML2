@@ -266,8 +266,21 @@ $("#booksearchbox").on("keyup",function(){
 	updateNames(); 
 });
 $("#bookshow").on('click' , 'a.page-link',function(e){
-	console.log(e.target);
+	 if($(this).attr('class') == 'page-link left-arrow' ){
+		 if(parseInt($('.page-link.active').text()) == 1){
+			var pg = 1; 
+		 } else {
+		  var pg = parseInt($('.page-link.active').text()) - 1;
+		 }
+	 } else if($(this).attr('class') == 'page-link right-arrow'){
+		 if(parseInt($('.page-link.active').text()) == parseInt($(this).parent().prev().text())){
+			var pg = parseInt($('.page-link.active').text()); 
+		 } else{
+		  var pg = parseInt($('.page-link.active').text()) + 1;  
+	 	}
+	 } else {
 	var pg  = e.target.childNodes[0].nodeValue;
+	 }
 	e.preventDefault();
 	var typ  = $("#inlineFormCustomSelectPref1").val();
 	var cat  = $("#inlineFormCustomSelectPref2").val();

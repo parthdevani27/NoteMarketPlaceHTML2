@@ -118,7 +118,7 @@ if(isset($_POST['pageno'])){
 										<a href="note-details.php?noteid=<?php echo $id;?>"><img src="<?php echo $img_path; ?>" alt="img" class="img-responsive"></a>
 									</div>
 									<div class="book-details">
-										<h4 class="book-heading-1"><a href="note-details.php?noteid=<?php echo $id;?>"><?php echo $title;
+										<h4 class="book-heading-1"><a class="title-link" href="note-details.php?noteid=<?php echo $id;?>"><?php echo $title;
 											?></a></h4>
 										<div class="icons">
 											<img src="images/Search/university.png" alt="img" class="img-responsive univer-img">

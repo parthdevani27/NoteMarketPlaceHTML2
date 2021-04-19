@@ -213,7 +213,7 @@ if(!is_numeric($firstname) && !is_numeric($lastname)){
 							     
 								     <div class="col-md-12 col-sm-12">
                                 <div id="signup-link">
-                                    <p class="text-center">Already have an account Have Account? <a href="login-page.php">Login</a></p>
+                                    <p class="text-center">Already have an account Have Account? <a href="login-page.php" class="login-link1">Login</a></p>
                                 </div>
 							</div>
 						</div>

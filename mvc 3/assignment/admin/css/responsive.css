@@ -335,7 +335,7 @@
 		padding: 1px;
 		font-weight: 300px;
 		line-height: 20px;
-		width: 30%;
+		width: 100%;
 	}
 
 	.btn-reject {
@@ -480,7 +480,7 @@
 		padding: 1px;
 		font-weight: 300px;
 		line-height: 20px;
-		width: 30%;
+		width: 100%;
 	}
 
 	.btn-reject {
@@ -680,7 +680,7 @@
 		padding: 1px;
 		font-weight: 300px;
 		line-height: 20px;
-		width: 30%;
+		width: 90%;
 	}
 
 	.btn-reject {

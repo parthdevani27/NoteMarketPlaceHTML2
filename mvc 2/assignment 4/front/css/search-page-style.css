@@ -2,7 +2,9 @@ html,body{
   height: 100%;
 	width: 100%;
 }
-
+body{
+	overflow-x: hidden;
+}
 #search-bacground-img{
 	height: 250px;
 	margin-top: 90px;
@@ -132,6 +134,10 @@ input[type="text"]{
 .book-details p span{
 
     color: #df3434;
+}
+.title-link,.title-link:hover{
+	color: #6255a5;
+	text-decoration: none;
 }
 .claender-img{
 	margin-left: 35px;

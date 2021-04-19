@@ -2,7 +2,9 @@ html,body{
   height: 100%;
 	width: 100%;
 }
-
+body{
+	overflow-x: hidden;
+}
 #home-bacground-img{
 	z-index: -2;
 top: 0;

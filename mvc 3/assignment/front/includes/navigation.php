@@ -85,22 +85,22 @@
           <div class="header-wrapper">
             <div class="logo-wrapper">
               <a href="home-page.php" title="Site Logo">
-                <img src="images/pre-login/logo.png" alt="top-logo" class="img-responsive">
+                <img id="home-logo" src="images/pre-login/logo.png" alt="top-logo" class="img-responsive">
               </a>
             </div>
             <div class="navigation-wrapper">
               <nav class="main-nav">  
                  <ul class="menu-navigation">
                     <li>
-                      <a href="search-page.php" <?php if($page == 'search'){echo "class='active'";} ?>>search notes</a>
+                      <a href="search-page.php" <?php if($page == 'search'){echo "class='active'";} ?>>Search notes</a>
                     </li>
                     <li>
-                      <a href="Dashboard%20Page.php" <?php if($page == 'dashboard'){echo "class='active'";} ?>>sell your notes</a>
+                      <a href="Dashboard%20Page.php" <?php if($page == 'dashboard'){echo "class='active'";} ?>>Sell your notes</a>
                     </li>
               
 				
                     <li>
-                      <a href="buyer-request-page.php" <?php if($page == 'buyerrequest'){echo "class='active'";} ?>>buyer request</a>
+                      <a href="buyer-request-page.php" <?php if($page == 'buyerrequest'){echo "class='active'";} ?>>Buyer request</a>
                     </li>
            
                     <li>

@@ -14,13 +14,16 @@ html,
 body {
     height: 100%;
 }
+body{
+	overflow-x: hidden;
+}
 section {
 
     background: #fff;
     overflow: hidden;
 }
 .background-img {
-	margin-top: 60px;
+	margin-top: 45px;
 }
 .background-img img{
 	position: absolute;

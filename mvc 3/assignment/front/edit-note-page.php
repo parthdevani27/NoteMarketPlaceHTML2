@@ -51,7 +51,7 @@ $seller_Ln 			= tabledata('users','LastName','ID',$seller_id);
 	if(!$mail->send()) {
 		echo '<script>alert("Your note is submitted for review");window.location.href="search-page.php";</script>';
 	} else {
-		echo '<script>alert("Your note is submitted for review");window.location.href="search-page.php";</script>';
+		echo '<script>alert("Your note is submitted for review");window.location.href="Dashboard%20Page.php";</script>';
 	}
 	}
 	
@@ -454,7 +454,7 @@ redirect("edit-note-page.php?editnote=$noteid");
 											<label for="notepreview2">
 												<img src="images/User-Profile/upload.png">
 												<p id="previewtext"><?php echo $e_notepreview;?></p>
-												<input type="file" class="upload" name="noteprevie" id="notepreview2" style="display:none;">
+												<input type="file" accept="application/pdf, application/vnd.ms-excel"  class="upload" name="noteprevie" id="notepreview2" style="display:none;">
 											</label>
 										</div>
 									</div>

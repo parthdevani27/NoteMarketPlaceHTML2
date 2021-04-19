@@ -26,19 +26,20 @@ function sticky_header() {
 
 jQuery(document).ready(function () {
   sticky_header();
-	
+	$("#home-logo").attr('src','images/pre-login/top-logo.png');
 });
 
 jQuery(window).scroll(function () {
   sticky_header();  
 	if( $(window).scrollTop() >= 100 ){
 	$('.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation>li a').css('color', '#333333');
-			
+	$("#home-logo").attr('src','images/pre-login/logo.png');	
+		
 	
 	} else {
 	$('.site-header .header-wrapper .navigation-wrapper .main-nav .menu-navigation>li a').css('color', '#fff');
 	$('.dropdown-content').css('color', '#333333');	
-	
+	$("#home-logo").attr('src','images/pre-login/top-logo.png');
 	}
 });
 

@@ -101,7 +101,7 @@ for( $i=0 ; $i < $total ; $i++ ) {
 }
 	
 
-		header("Location: edit-note-page.php?editnote=$lastnoteid");
+		header("Location: Dashboard%20Page.php");
 }
 } else {
 	redirect();
@@ -323,7 +323,7 @@ for( $i=0 ; $i < $total ; $i++ ) {
 											<label for="notepreview1">
 												<img src="images/User-Profile/upload.png">
 												<p id="previewtext" style="color: lightgray;">Upload a file</p>
-												<input type="file" class="upload" name="noteprevie" id="notepreview1" style="display:none;" required>
+												<input type="file" accept="application/pdf, application/vnd.ms-excel"  class="upload" name="noteprevie" id="notepreview1" style="display:none;" required>
 											</label>
 										</div>
 									</div>

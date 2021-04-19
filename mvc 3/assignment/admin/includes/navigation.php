@@ -111,7 +111,7 @@
 							</li>
 							<li>
 								<a>	<div class="dropdown">
-										<button class="dropbtn"><a href="">Notes</a></button>
+										<button class="dropbtn"><a href="#">Notes</a></button>
 										<div class="dropdown-content">
 											<a href="note-under-review.php" <?php if($page == 'underreview'){echo "class='active-dropdown'";} ?>>Note under review</a>
 											

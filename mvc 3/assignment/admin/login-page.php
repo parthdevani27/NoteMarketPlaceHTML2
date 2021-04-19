@@ -30,7 +30,10 @@ if(isset($_POST['login'])){
 		if(IsActive('users',$db_id)){					
 					
 		if($password === $db_password){
-				
+			if(isset($_POST['rememberMe'])){
+				setcookie('emailcookie',$email,time()+86400);
+				setcookie('pwdcookie',$password,time()+86400);
+			}	
 		if($isemailverified == 0){
 			
 			$SystemEmail =  systemSendEmail();
@@ -193,7 +196,7 @@ maximum-scale=1.0 ,user-scalable=no">
 						
 						<div class="col-md-12 col-sm-12">
 								<label  id="email-1">Email</label>
-								<input type="email" name="email" class="form-control"  aria-describedby="emailHelp" placeholder="notesmarketplace@gmail.com" required>
+								<input type="email" value="<?php if(isset($_COOKIE['emailcookie'])){echo $_COOKIE['emailcookie'];} ?>" name="email" class="form-control"  aria-describedby="emailHelp" placeholder="notesmarketplace@gmail.com" required>
 								</div>
 								
 								
@@ -209,7 +212,7 @@ maximum-scale=1.0 ,user-scalable=no">
                                             
                                             
 											</div>
-											<input type="password" name="password" class="form-control toggle-pwd" 
+											<input type="password" value="<?php if(isset($_COOKIE['pwdcookie'])){echo $_COOKIE['pwdcookie'];} ?>" name="password" class="form-control toggle-pwd" 
                                             placeholder="Password" required>
                                         <span toggle="#password-field1" class="eye field-icon toggle-password"><img id="toggle-eye"
                                                 src="img/eye.png" alt="eye"></span>
@@ -218,7 +221,7 @@ maximum-scale=1.0 ,user-scalable=no">
 						</div>
 						<div class="col-md-12 col-sm-12">
 							 <div class="form-group form-check" id="add-margin">
-                                        <input type="checkbox" class="form-check-input" id="chk">
+                                     <input type="checkbox" name="rememberMe" class="form-check-input" id="chk" <?php if(isset($_COOKIE['pwdcookie'])){ echo 'checked';} ?>>
                                         <label class="form-check-label" for="chk" id="chk-label">Remeber Me</label>
                                     </div>
 						</div>
@@ -231,7 +234,7 @@ maximum-scale=1.0 ,user-scalable=no">
 						
 						<div class="col-md-12 col-sm-12">
 						  <div class="bottom-text">
-							  <p class="text-center">Don't Have Account? <a href="../front/sign-up.php">Sign up</a></p>
+							  <p class="text-center">Don't Have Account? <a class="sign-uplink" href="../front/sign-up.php">Sign up</a></p>
 							  </div>
 						</div>
 						<div class="col-md-12 col-sm-12"></div>

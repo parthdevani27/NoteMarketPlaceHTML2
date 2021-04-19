@@ -68,8 +68,9 @@
     font-weight: 600;
     line-height: 20px;
 }	
-.add-color{
+.add-color,.add-color:hover{
 	color: #6255a5;
+	text-decoration: none;
 }
 
 
@@ -128,7 +129,7 @@ left: -180px;
 	color: #ffffff !important;
 	border-radius: 4px;
 	padding-bottom: 8px !important;
-	
+	text-decoration: none;
 }
 .dropdown:hover .dropdown-content {display: block;}
 
@@ -244,6 +245,7 @@ left: -180px;
       font-family: "open Sans", sans-serif;
       font-size: 18px;
       line-height: 22px;
+	  border-radius: 3px;
 }
 .horizontal-rule{
 	border-top: 1px solid #d1d1d1;

@@ -237,6 +237,14 @@ input[type="text"]{
 }
 
 
+.login-link,.login-link:hover{
+			font-family: "open Sans", sans-serif;
+	color: #6255a5;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+	text-decoration: none;
+}
 
 
 

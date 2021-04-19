@@ -9,6 +9,9 @@
 html,body{
   height: 100%;
 }
+body{
+	overflow-x: hidden;
+}
 #background-img-user-page{
 	margin-top: 80px;
 }

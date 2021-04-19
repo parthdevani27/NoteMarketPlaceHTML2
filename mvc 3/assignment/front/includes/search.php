@@ -120,7 +120,7 @@ if(isset($_POST['pageno'])){
 										<a href="note-details.php?noteid=<?php echo $id;?>"><img src="<?php echo $img_path; ?>" alt="img" class="img-responsive"></a>
 									</div>
 									<div class="book-details">
-										<h4 class="book-heading-1"><a href="note-details.php?noteid=<?php echo $id;?>"><?php echo $title;
+										<h4 class="book-heading-1"><a class="title-link" href="note-details.php?noteid=<?php echo $id;?>"><?php echo $title;
 											?></a></h4>
 										<div class="icons">
 											<img src="images/Search/university.png" alt="img" class="img-responsive univer-img">
@@ -211,8 +211,8 @@ $rate = ceil($rate);
 		<nav aria-label="Page navigation example " class=" text-center">
 			<ul class="pagination">
 				<li class="page-item">
-					<a class="page-link" href='#'   aria-label="Previous">
-						<span aria-hidden="true"> <img src="images/Search/left-arrow.png" alt="img" class="img-responsive "></span>
+					<a class="page-link left-arrow" href='#'   aria-label="Previous">
+						<span aria-hidden="true"> <img src="images/Search/left-arrow.png" alt="img" class="img-responsive"></span>
 					</a>
 				</li>
 				<?php 
@@ -228,7 +228,7 @@ $rate = ceil($rate);
 				
 				
 				<li class="page-item">
-					<a class="page-link" href='#' aria-label="Next">
+					<a class="page-link right-arrow" href='#' aria-label="Next">
 						<span aria-hidden="true"> <img src="images/Search/right-arrow.png" alt="img" class="img-responsive ">
 						</span>
 					</a>
