@@ -196,7 +196,7 @@ maximum-scale=1.0 ,user-scalable=no">
 						
 						<div class="col-md-12 col-sm-12">
 								<label  id="email-1">Email</label>
-								<input type="text" value="<?php if(isset($_COOKIE['emailcookie'])){echo $_COOKIE['emailcookie'];} ?>" name="email" class="form-control"  aria-describedby="emailHelp" placeholder="notesmarketplace@gmail.com" required>
+								<input id="email" type="text" value="<?php if(isset($_COOKIE['emailcookie'])){echo $_COOKIE['emailcookie'];} ?>" name="email" class="form-control"  aria-describedby="emailHelp" placeholder="notesmarketplace@gmail.com" required>
 								</div>
 								
 								
