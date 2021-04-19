@@ -205,7 +205,7 @@ if(isset($_POST['login'])){
 										</div>
 									</div>
 									<div class="col-md-12 col-sm-12">
-										<button type="submit" name="login" class="btn btn-block btn-general">Login</button>
+										<button onclick="return validation()" type="submit" name="login" class="btn btn-block btn-general">Login</button>
 									</div>
 									<div class="col-md-12 col-sm-12">
 										<div class="bottom-text">
@@ -228,6 +228,22 @@ if(isset($_POST['login'])){
 	<!-- Bootstrap JS -->
 	<script src="js/bootstrap/bootstrap.min.js"></script>
 	<!-- link js file-->
+	
+<script>
+function validation(){
+	var a = $("#email").val();
+		var b = $(".toggle-pwd").val();
+
+if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(a))
+  {
+    return (true);
+  } else {
+	  alert("Please enter valid email");
+	  return (false); 
+  }
+}
+
+</script>
 	<script src="js/script.js"></script>
 </body>
 
